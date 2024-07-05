@@ -4,6 +4,7 @@ const Wrapper = styled.section`
     height: 100vh;
     width: 100vw;
     background-color: var(--primary);
+    overflow-y: hidden;
     
     .main-container{
         height: 100%;
