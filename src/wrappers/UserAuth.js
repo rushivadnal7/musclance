@@ -8,6 +8,7 @@ const Wrapper = styled.section`
     .main-container{
         height: 100%;
         width: 100%;
+        position: relative;
     }
 
     .images-container{
