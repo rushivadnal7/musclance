@@ -38,7 +38,7 @@ const UserAuth = () => {
           </div>
         </div>
 
-        <div className="auth-selection-container">
+        <div className="auth-selection-container text-black">
             <button>sign in</button>
             <span>or create account</span>
         </div>
