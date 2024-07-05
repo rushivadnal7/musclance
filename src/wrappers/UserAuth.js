@@ -62,7 +62,7 @@ const Wrapper = styled.section`
         border-radius: 5px 80px 0px 0px ;
         position: absolute;
         bottom: 0;
-        height: 17rem;
+        height: 20%;
         width: 100%;
         background-color: var(--seasalt);
     }
