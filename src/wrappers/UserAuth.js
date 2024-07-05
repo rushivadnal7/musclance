@@ -63,8 +63,32 @@ const Wrapper = styled.section`
         position: absolute;
         bottom: 0;
         height: 30%;
+        display: flex;
+        justify-content: center;
         width: 100%;
         background-color: var(--seasalt);
+    }
+    .content-div{
+        height: 100%;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .text-content{
+        width: 100%;
+        font-size: 1.1rem;
+        font-weight: 600;
+    } 
+    
+    .login-navigate-text{
+        font-size: 1.1rem;
+        font-weight: 600;
+        align-self: flex-end;
+        display: flex;
+        gap: 5px;
     }
 
 

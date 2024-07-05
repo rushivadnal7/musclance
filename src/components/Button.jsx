@@ -1,11 +1,12 @@
-import React from 'react'
+import React from "react";
+import { Wrapper } from "../wrappers/Button";
 
-const Button = (text) => {
-    return (
-        <>
-            <button className="btn btn-primary">{text}</button>
-        </>
-    )
-}
+const Button = ({ text, className }) => {
+  return (
+    <>
+      <Wrapper className={`${className} button`}>{text}</Wrapper>
+    </>
+  );
+};
 
-export default Button
+export default Button;
