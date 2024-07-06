@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import './App.css'
 import UserAuth from './pages/UserAuth'
+import SignIn from './pages/SignIn'
 
 
 function App() {
@@ -8,7 +9,13 @@ function App() {
     {
       path: '/',
       element: <UserAuth />
-    }
+    },
+    {
+      path: '/signin',
+      element: <SignIn/>
+    },
+
+    
   ])
 
   return (

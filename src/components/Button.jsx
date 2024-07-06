@@ -1,10 +1,10 @@
 import React from "react";
 import { Wrapper } from "../wrappers/Button";
 
-const Button = ({ text, className }) => {
+const Button = ({ text, className , onClick}) => {
   return (
     <>
-      <Wrapper className={`${className} button`}>{text}</Wrapper>
+      <Wrapper onClick={onClick} className={`${className} button`}>{text}</Wrapper>
     </>
   );
 };

@@ -4,12 +4,14 @@ import slider_image_2 from "../assets/auth_image_2.jpeg";
 import slider_image_1 from "../assets/auth_image_1.jpeg";
 import slider_image_3 from "../assets/auth_image_3.jpeg";
 import Button from "../components/Button";
+import { useNavigate } from "react-router-dom";
 
 const UserAuth = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const images = [slider_image_1, slider_image_2, slider_image_3];
 
   const interval = useRef(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     interval.current = setInterval(() => {
@@ -30,13 +32,20 @@ const UserAuth = () => {
     window.addEventListener("resize", adjustHeight);
     window.addEventListener("orientationchange", adjustHeight);
 
-    adjustHeight(); // Adjust on initial load
+    adjustHeight(); 
 
     return () => {
       window.removeEventListener("resize", adjustHeight);
       window.removeEventListener("orientationchange", adjustHeight);
     };
   }, []);
+
+  const signInHandler = () => {
+    navigate('/signin')
+  }
+  const signUpHandler = () => {
+    navigate('/signin')
+  }
 
   return (
     <Wrapper>
@@ -63,7 +72,7 @@ const UserAuth = () => {
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse,
               tempore!
             </span>
-            <Button className="long-button" text="sign in" />
+            <Button onClick={signInHandler} className="long-button" text="sign in" />
             <div className="login-navigate-text">
               <span className="">or create account</span>
               <svg
