@@ -19,6 +19,25 @@ const UserAuth = () => {
     return () => clearInterval(interval.current);
   }, [images.length]);
 
+  useEffect(() => {
+    const adjustHeight = () => {
+      document.documentElement.style.setProperty(
+        "--vh",
+        `${window.innerHeight * 0.01}px`
+      );
+    };
+
+    window.addEventListener("resize", adjustHeight);
+    window.addEventListener("orientationchange", adjustHeight);
+
+    adjustHeight(); // Adjust on initial load
+
+    return () => {
+      window.removeEventListener("resize", adjustHeight);
+      window.removeEventListener("orientationchange", adjustHeight);
+    };
+  }, []);
+
   return (
     <Wrapper>
       <div className="main-container">
