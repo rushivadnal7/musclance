@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const Wrapper = styled.section`
-    height: 100vh;
+    height: calc(100vh - env(safe-area-inset-bottom));
     width: 100vw;
     background-color: var(--primary);
     overflow-y: hidden;
