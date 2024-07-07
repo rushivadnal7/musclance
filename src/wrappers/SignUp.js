@@ -74,7 +74,7 @@ export const Wrapper = styled.section`
     background-color: transparent;
     color: var(--seasalt);
     height: 2.5rem;
-    padding: 2px 4px;
+    padding: 2px 12px;
     margin: 5px 0px;
     border-bottom: 1px solid var(--cadet-gray) ;
 }
