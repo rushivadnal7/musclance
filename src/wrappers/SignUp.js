@@ -70,11 +70,14 @@ export const Wrapper = styled.section`
     margin-left: 0.5rem;
 }
 
+#name , #email , #number , #password , #confirm-password {
+    padding: 2px 12px;
+}
+
 .input-elements{
     background-color: transparent;
     color: var(--seasalt);
     height: 2.5rem;
-    padding: 2px 12px;
     margin: 5px 0px;
     border-bottom: 1px solid var(--cadet-gray) ;
 }
