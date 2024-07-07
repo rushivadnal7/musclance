@@ -35,6 +35,9 @@ const SignIn = () => {
             <span>Lorem ipsum dolor sit amet.</span>
           </div>
         </div>
+        <div className="">
+
+        </div>
       </Wrapper>
     </>
   );

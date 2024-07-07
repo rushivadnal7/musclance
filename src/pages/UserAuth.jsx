@@ -44,7 +44,7 @@ const UserAuth = () => {
     navigate('/signin')
   }
   const signUpHandler = () => {
-    navigate('/signin')
+    navigate('/signup')
   }
 
   return (
@@ -74,7 +74,7 @@ const UserAuth = () => {
             </span>
             <Button onClick={signInHandler} className="long-button" text="sign in" />
             <div className="login-navigate-text">
-              <span className="">or create account</span>
+              <span onClick={signUpHandler} className="">or create account</span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
