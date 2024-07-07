@@ -36,19 +36,26 @@ export const Wrapper = styled.section`
         /* background-color: aliceblue; */
     }
 
+    .container{
+        width: 100%;
+        height: 100%;
+        padding: 0px 40px;
+    }
+    
     .inputs-container{
         overflow-y: scroll;
         width: 100%;
-        height: 100%;
+        height: 80%;
         display: flex;
+        /* border: 1px solid red; */
         flex-direction: column;
         justify-content: space-evenly;
-        padding: 0px 40px;
     }
+
 
     .height-weight-inputs , .age-gender-inputs {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     color: var(--seasalt);
 }
@@ -67,6 +74,7 @@ export const Wrapper = styled.section`
     background-color: transparent;
     color: var(--seasalt);
     height: 2.5rem;
+    margin: 5px 0px;
     border-bottom: 1px solid var(--cadet-gray) ;
 }
 
