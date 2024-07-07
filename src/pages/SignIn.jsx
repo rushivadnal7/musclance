@@ -5,6 +5,11 @@ import { useNavigate } from "react-router-dom";
 const SignIn = () => {
   const navigate = useNavigate();
 
+
+  const handleSubmit = () => {
+
+  }
+
   return (
     <>
       <Wrapper>
@@ -35,9 +40,12 @@ const SignIn = () => {
             <span>Lorem ipsum dolor sit amet.</span>
           </div>
         </div>
-        <div className="">
-
-        </div>
+          <form onSubmit={handleSubmit}>
+            <div className="">
+              
+            </div>
+          </form>
+       
       </Wrapper>
     </>
   );

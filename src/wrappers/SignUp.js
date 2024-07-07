@@ -51,7 +51,6 @@ export const Wrapper = styled.section`
     justify-content: space-evenly;
     align-items: center;
     color: var(--seasalt);
-    /* background-color: var(--seasalt); */
 }
 
 .feet-inputs {
@@ -75,10 +74,6 @@ export const Wrapper = styled.section`
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.signin-group :nth-child(2){
-    
 }
 
 `
