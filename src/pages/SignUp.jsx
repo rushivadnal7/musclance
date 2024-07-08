@@ -20,6 +20,7 @@ const SignUp = () => {
 
   const [errors, setErrors] = useState({});
   const [showErrors, setShowErrors] = useState(false);
+  const [disableInputs, setDisableInputs] = useState(true);
 
   const onChangeHandler = (e) => {
     const { name, value } = e.target;
@@ -59,15 +60,13 @@ const SignUp = () => {
     } else {
       setErrors(errors);
       setShowErrors(true);
-      // Hide error messages after 5 seconds
-      // setTimeout(() => {
-      //   setShowErrors(false);
-      // }, 5000);
+      setDisableInputs(true)
     }
   };
 
   const progresBarHandler = () => {
     setShowErrors(false);
+    setDisableInputs(false);
   };
   return (
     <>
@@ -93,7 +92,7 @@ const SignUp = () => {
               <div className="error-message">
                 {Object.values(errors).map((error, index) => (
                   <>
-                  <span key={index}>{`${index + 1}. ${error}`}</span> <br />
+                    <span key={index}>{`${index + 1}. ${error}`}</span> <br />
                   </>
                 ))}
               </div>
@@ -145,8 +144,9 @@ const SignUp = () => {
                 onChange={onChangeHandler}
                 name="name"
                 id="name"
+                disabled={disableInputs}
               />
-              
+
               <input
                 className="input-elements"
                 type="email"
@@ -154,6 +154,7 @@ const SignUp = () => {
                 onChange={onChangeHandler}
                 name="email"
                 id="email"
+                disabled={disableInputs}
               />
               <input
                 className="input-elements"
@@ -162,6 +163,7 @@ const SignUp = () => {
                 onChange={onChangeHandler}
                 name="phone"
                 id="number"
+                disabled={disableInputs}
               />
               <div className="height-weight-inputs ">
                 <div className="height-group">
@@ -175,6 +177,7 @@ const SignUp = () => {
                     placeholder="feet"
                     max={8}
                     min={2}
+                    disabled={disableInputs}
                   />
                   <input
                     className="input-elements feet-inputs"
@@ -185,6 +188,7 @@ const SignUp = () => {
                     onChange={onHeightChangeHandler}
                     max={12}
                     min={0}
+                    disabled={disableInputs}
                   />
                 </div>
 
@@ -198,6 +202,7 @@ const SignUp = () => {
                     id="weight"
                     max={70}
                     min={7}
+                    disabled={disableInputs}
                   />
                 </div>
               </div>
@@ -212,6 +217,7 @@ const SignUp = () => {
                     id="age"
                     max={70}
                     min={7}
+                    disabled={disableInputs}
                   />
                 </div>
                 <div className="gender-group">
@@ -221,6 +227,7 @@ const SignUp = () => {
                     name="gender"
                     onChange={onChangeHandler}
                     id="gender"
+                    disabled={disableInputs}
                   >
                     <option value="male">Male</option>
                     <option value="female">Female</option>
@@ -235,6 +242,7 @@ const SignUp = () => {
                 onChange={onChangeHandler}
                 name="password"
                 id="password"
+                disabled={disableInputs}
               />
               <input
                 className="input-elements"
@@ -243,6 +251,7 @@ const SignUp = () => {
                 onChange={onChangeHandler}
                 name="confirmPassword"
                 id="confirm-password"
+                disabled={disableInputs}
               />
             </div>
             <Button
