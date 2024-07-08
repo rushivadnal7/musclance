@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Wrapper } from "../wrappers/SignUp";
 import { useNavigate } from "react-router-dom";
 import Button from "../components/Button";
+import ProgressBar from "../components/ProgressBar";
 
 const SignUp = () => {
   const navigate = useNavigate();
@@ -18,6 +19,7 @@ const SignUp = () => {
   });
 
   const [errors, setErrors] = useState({});
+  const [showErrors, setShowErrors] = useState(false);
 
   const onChangeHandler = (e) => {
     const { name, value } = e.target;
@@ -56,12 +58,58 @@ const SignUp = () => {
       console.log("FormData : ", formdata);
     } else {
       setErrors(errors);
+      setShowErrors(true);
+      // Hide error messages after 5 seconds
+      // setTimeout(() => {
+      //   setShowErrors(false);
+      // }, 5000);
     }
   };
 
+  const progresBarHandler = () => {
+    setShowErrors(false);
+  };
   return (
     <>
       <Wrapper>
+        {showErrors && (
+          <div className="error-container">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-12"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z"
+              />
+            </svg>
+
+            {Object.keys(errors).length <= 3 && (
+              <div className="error-message">
+                {Object.values(errors).map((error, index) => (
+                  <>
+                  <span key={index}>{`${index + 1}. ${error}`}</span> <br />
+                  </>
+                ))}
+              </div>
+            )}
+            {Object.keys(errors).length > 3 && (
+              <div className="error-message">
+                <span>Please Fill all the credentials</span>
+              </div>
+            )}
+            <ProgressBar
+              maxValue={5}
+              width={"100"}
+              onComplete={progresBarHandler}
+            />
+          </div>
+        )}
         <div className="header-container">
           <span>
             <svg
@@ -98,18 +146,15 @@ const SignUp = () => {
                 name="name"
                 id="name"
               />
-              {errors.name && <span className="error-text">{errors.name}</span>}
+              
               <input
                 className="input-elements"
-                type="text"
+                type="email"
                 placeholder="Email"
                 onChange={onChangeHandler}
                 name="email"
                 id="email"
               />
-              {errors.email && (
-                <span className="error-text">{errors.email}</span>
-              )}
               <input
                 className="input-elements"
                 type="number"
@@ -118,10 +163,6 @@ const SignUp = () => {
                 name="phone"
                 id="number"
               />
-              {errors.phone && (
-                <span className="error-text">{errors.phone}</span>
-              )}
-
               <div className="height-weight-inputs ">
                 <div className="height-group">
                   <label htmlFor="height">Height : </label>
@@ -145,9 +186,6 @@ const SignUp = () => {
                     max={12}
                     min={0}
                   />
-                  {errors.height && (
-                    <span className="error-text">{errors.height}</span>
-                  )}
                 </div>
 
                 <div className="weight-group">
@@ -161,9 +199,6 @@ const SignUp = () => {
                     max={70}
                     min={7}
                   />
-                  {errors.weight && (
-                    <span className="error-text">{errors.weight}</span>
-                  )}
                 </div>
               </div>
               <div className="age-gender-inputs">
@@ -178,9 +213,6 @@ const SignUp = () => {
                     max={70}
                     min={7}
                   />
-                  {errors.age && (
-                    <span className="error-text">{errors.age}</span>
-                  )}
                 </div>
                 <div className="gender-group">
                   <label htmlFor="gender">Gender : </label>
@@ -193,9 +225,6 @@ const SignUp = () => {
                     <option value="male">Male</option>
                     <option value="female">Female</option>
                   </select>
-                  {errors.gender && (
-                    <span className="error-text">{errors.gender}</span>
-                  )}
                 </div>
               </div>
 
@@ -207,9 +236,6 @@ const SignUp = () => {
                 name="password"
                 id="password"
               />
-              {errors.password && (
-                <span className="error-text">{errors.password}</span>
-              )}
               <input
                 className="input-elements"
                 type="password"
@@ -218,9 +244,6 @@ const SignUp = () => {
                 name="confirmPassword"
                 id="confirm-password"
               />
-              {errors.confirmPassword && (
-                <span className="error-text">{errors.confirmPassword}</span>
-              )}
             </div>
             <Button
               width="100"

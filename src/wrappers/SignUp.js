@@ -86,6 +86,38 @@ export const Wrapper = styled.section`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 15px;
 }
+
+.error-container {
+  position: absolute;
+  top: 30%; /* Position the error container within the top 30% of the viewport */
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--seasalt);
+  display: flex ;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  background-color: var(--cadet-gray);
+  padding: 1rem; /* Add padding for better appearance */
+  border-radius: 8px; /* Add border radius for rounded corners */
+  text-align: center;
+  z-index: 1000; /* Ensure it appears above other content */
+}
+
+.error-container svg{
+    color: var(--maroon);
+}
+
+.error-message {
+  color: var(--maroon);
+  font-size: larger;
+  font-weight: 600;
+  margin: 1rem;
+  text-align: justify;
+}
+
 
 `
