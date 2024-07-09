@@ -33,7 +33,6 @@ export const Wrapper = styled.section`
     form{
         height: 75%;
         width: 100%;
-        /* background-color: aliceblue; */
     }
 
     .container{
@@ -71,7 +70,7 @@ export const Wrapper = styled.section`
 }
 
 #name , #email , #number , #password , #confirm-password {
-    padding: 2px 12px;
+    padding: 20px 15px;
 }
 
 .input-elements{
@@ -100,7 +99,7 @@ export const Wrapper = styled.section`
   flex-direction: column;
   align-items: center;
   width: 80%;
-  background-color: var(--cadet-gray);
+  background-color: var(--silver);
   padding: 1rem; /* Add padding for better appearance */
   border-radius: 8px; /* Add border radius for rounded corners */
   text-align: center;
@@ -108,11 +107,11 @@ export const Wrapper = styled.section`
 }
 
 .error-container svg{
-    color: var(--maroon);
+    color: var(--off-red);
 }
 
 .error-message {
-  color: var(--maroon);
+  color: var(--seasalt);
   font-size: larger;
   font-weight: 600;
   margin: 1rem;

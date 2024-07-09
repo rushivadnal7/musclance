@@ -5,7 +5,7 @@ const Bar = styled.div`
   width: ${(props) => props.width}%;
   height: 1.5rem;
   background-color: var(--seasalt);
-  border-radius: 20px;
+  border-radius: 30px;
   position: relative;
   overflow: hidden;
 
@@ -27,9 +27,9 @@ const ProgressBar = ({ width, maxValue , onComplete }) => {
   const [percent, setPercent] = useState(0);
 
   useEffect(() => {
-    const duration = maxValue * 1000; // Convert maxValue to milliseconds
-    const intervalTime = 50; // Interval time in milliseconds
-    const increment = 100 / (duration / intervalTime); // Increment percentage per interval
+    const duration = maxValue * 1000;
+    const intervalTime = 50; 
+    const increment = 100 / (duration / intervalTime); 
 
     const interval = setInterval(() => {
       setPercent((prev) => {
