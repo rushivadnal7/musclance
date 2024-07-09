@@ -17,13 +17,15 @@ const SignIn = () => {
     setFormData({ ...formData, [name]: value });
   };
 
-  console.log(ViewPassword);
   const viewPasswordToggler = () => {
     setViewPassword(!ViewPassword);
     console.log(ViewPassword);
   };
 
-  const handleSubmit = (e) => {};
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    console.log(formData)
+  };
 
   return (
     <>
