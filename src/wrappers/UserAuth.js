@@ -1,22 +1,41 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 const Wrapper = styled.section`
   height: 100vh;
   width: 100vw;
   background-color: var(--primary);
-  
+  @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+    display: flex;
+    justify-content: center;
+  }
+
   .main-container {
     height: calc(var(--vh, 1vh) * 100);
     width: 100%;
     position: relative;
+
+
+    @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+      width: 70%;
+      display: flex;
+    }
+    @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
+      display: flex;
+    }
   }
 
   .images-container {
     height: 80%;
     width: 100%;
     position: relative;
+    @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+      height: 100%;
+    }
+    @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
+      height: 100%;
+    }
   }
-  
+
   .images-container img {
     height: 100%;
     width: 100%;
@@ -65,6 +84,17 @@ const Wrapper = styled.section`
     justify-content: center;
     width: 100%;
     background-color: var(--seasalt);
+
+    @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+      position: static;
+      border-radius: 0px;
+      height: 100%;
+    }
+    @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
+      position: static;
+      border-radius: 0px;
+      height: 100%;
+    }
   }
 
   .content-div {
@@ -76,10 +106,10 @@ const Wrapper = styled.section`
     align-items: center;
   }
 
-  .text-content {
+  .icon-content {
     width: 100%;
-    font-size: 1.1rem;
-    font-weight: 600;
+    font-size: 3rem;
+    font-weight: bolder;
   }
 
   .login-navigate-text {

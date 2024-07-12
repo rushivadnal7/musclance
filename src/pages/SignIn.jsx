@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Wrapper } from "../wrappers/SignIn";
 import { useNavigate } from "react-router-dom";
 import Button from "../components/Button";
+import ProgressBar from "../components/ProgressBar";
 
 const SignIn = () => {
   const navigate = useNavigate();
@@ -11,10 +12,25 @@ const SignIn = () => {
     password: "",
   });
   const [ViewPassword, setViewPassword] = useState(false);
+  const [errors, setErrors] = useState({});
+  const [showErrors, setShowErrors] = useState(false);
+  const [disableInputs, setDisableInputs] = useState(false);
 
   const onChangeHandler = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
+  };
+
+  const validate = () => {
+    const errors = {};
+    if (!formData.email) {
+      errors.email = "Please enter Email";
+    }
+    if (!formData.password) {
+      errors.password = "Please enter Password";
+    }
+
+    return errors;
   };
 
   const viewPasswordToggler = () => {
@@ -23,42 +39,89 @@ const SignIn = () => {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault()
-    console.log(formData)
+    e.preventDefault();
+    let errors = validate();
+    if (Object.keys(errors).length === 0) {
+      navigate("/home");
+    } else {
+      setErrors(errors);
+      setShowErrors(true);
+      setDisableInputs(true);
+    }
+
+    console.log(formData);
+  };
+
+  const progresBarHandler = () => {
+    setShowErrors(false);
+    setDisableInputs(false);
   };
 
   return (
     <>
       <Wrapper>
-        <div className="header-container">
-          <span>
+        {showErrors && (
+          <div className="error-container">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
-              strokeWidth="3"
-              width="36"
-              height="36"
+              strokeWidth="1.5"
               stroke="currentColor"
-              className="size-12 arrow"
-              onClick={() => navigate("/")}
+              class="size-12"
             >
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                d="M6.75 15.75 3 12m0 0 3.75-3.75M3 12h18"
+                d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z"
               />
             </svg>
-          </span>
-          <div className="container-text">
-            <span>
-              Welcome <br /> Back!
-            </span>
-            <span>Lorem ipsum dolor sit amet.</span>
+
+            {Object.keys(errors).length > 0 && (
+              <div className="error-message">
+                {Object.values(errors).map((error, index) => (
+                  <>
+                    <span key={index}>{`${index + 1}. ${error}`}</span> <br />
+                  </> 
+                ))}
+              </div>
+            )}
+            <ProgressBar
+              maxValue={5}
+              width={"100"}
+              onComplete={progresBarHandler}
+            />
           </div>
-        </div>
-        <form onSubmit={handleSubmit}>
-          <div className="container">
+        )}
+        <div className="main-container">
+          <div className="header-container">
+            <span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth="3"
+                width="36"
+                height="36"
+                stroke="currentColor"
+                className="size-12 arrow"
+                onClick={() => navigate("/")}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"
+                />
+              </svg>
+            </span>
+            <div className="container-text">
+              <span>
+                Welcome Back to <br /> Fatigued!
+              </span>
+              <span>Lorem ipsum dolor sit amet.</span>
+            </div>
+          </div>
+          <form onSubmit={handleSubmit}>
             <div className="inputs-container">
               <input
                 className="input-elements"
@@ -78,6 +141,7 @@ const SignIn = () => {
                   name="password"
                   id="password"
                 />
+
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -130,8 +194,8 @@ const SignIn = () => {
                 </span>
               </div>
             </div>
-          </div>
-        </form>
+          </form>
+        </div>
       </Wrapper>
     </>
   );

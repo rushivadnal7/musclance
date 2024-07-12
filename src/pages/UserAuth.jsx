@@ -68,9 +68,8 @@ const UserAuth = () => {
 
         <div className="auth-selection-container text-black">
           <div className="content-div">
-            <span className="text-content">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse,
-              tempore!
+            <span className="icon-content">
+              Fatigued.
             </span>
             <Button onClick={signInHandler} className="long-button" text="sign in" />
             <div className="login-navigate-text">

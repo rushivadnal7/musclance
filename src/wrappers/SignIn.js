@@ -5,20 +5,50 @@ export const Wrapper = styled.section`
   height: 100vh;
   background-color: var(--primary);
   position: relative;
+  @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .main-container{
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+
+    @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+      display: flex;
+      width: 70%;
+      height: 95%;
+    }
+    @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
+      display: flex;
+    }
+  }
 
   .header-container {
     width: 100%;
     height: 25%;
-    /* position: absolute;
-        top: 0; */
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     background-color: var(--seasalt);
-    align-items: start;
+    align-items: start; 
     padding: 0px 50px;
     color: var(--primary);
     border-radius: 0px 0px 5px 80px;
+    
+    @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+      height: 100%;
+      width: 50%;
+    }
+    @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
+      display: flex;
+      height: 100%;
+      width: 50%;
+      border-radius: 0px;
+    }
   }
 
   .arrow {
@@ -34,16 +64,24 @@ export const Wrapper = styled.section`
   form {
     height: 75%;
     width: 100%;
+    padding: 0px 40px;
+
+    @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
+      height: 100%;
+      width: 50%;
+    }
+    @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
+      height: 100%;
+      width: 50%;
+    }
   }
 
   .container {
     width: 100%;
     height: 100%;
-    padding: 0px 40px;
   }
 
   .inputs-container {
-    overflow-y: scroll;
     width: 100%;
     height: 70%;
     display: flex;
@@ -51,7 +89,7 @@ export const Wrapper = styled.section`
     justify-content: space-evenly;
   }
 
-  .submit-elements{
+  .submit-elements {
     height: 30%;
   }
 
@@ -76,9 +114,39 @@ export const Wrapper = styled.section`
     right: 10px;
   }
 
-  .forgot-password{
+  .forgot-password {
     display: flex;
     margin: 1rem 0px;
     justify-content: end;
+  }
+
+  .error-container {
+    position: absolute;
+    top: 30%; /* Position the error container within the top 30% of the viewport */
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--seasalt);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    background-color: var(--silver);
+    padding: 1rem; /* Add padding for better appearance */
+    border-radius: 8px; /* Add border radius for rounded corners */
+    text-align: center;
+    z-index: 1000; /* Ensure it appears above other content */
+  }
+
+  .error-container svg {
+    color: var(--off-red);
+  }
+
+  .error-message {
+    color: var(--seasalt);
+    font-size: larger;
+    font-weight: 600;
+    margin: 1rem;
+    text-align: justify;
   }
 `;
