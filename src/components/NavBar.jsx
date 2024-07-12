@@ -4,8 +4,7 @@ import Button from "./Button";
 import { useNavigate } from "react-router-dom";
 
 const NavBar = () => {
-
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const [menuToggle, setMenuToggle] = useState(false);
 
   const HandleMenuToggle = () => {
@@ -35,7 +34,9 @@ const NavBar = () => {
         </svg>
 
         <div
-          className={`navigate-container ${menuToggle ? "block" : "hidden"}`}
+          className={`navigate-container ${
+            menuToggle ? "menu-openner" : "menu-closer"
+          }`}
         >
           <div className="close-menu">
             <svg
@@ -63,7 +64,7 @@ const NavBar = () => {
               <li>contact</li>
             </ul>
             <Button
-              onClick={()=> navigate('/') }
+              onClick={() => navigate("/")}
               svg={
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

@@ -11,7 +11,7 @@ export const Wrapper = styled.nav`
     background-color: var(--seasalt);
     color: var(--primary);
     
-    @media (min-width: ${({theme}) => theme.breakpoints.lg}) {
+    @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
         flex-direction: row;
     }
 
@@ -35,6 +35,14 @@ export const Wrapper = styled.nav`
         height: 100%;
         padding: 10px;
         background-color: var(--seasalt);
+        transition: all 1s ease-in;
+    }
+
+    .menu-openner{
+        animation: menu_open_animator 0.5s ease-in forwards;
+    }
+    .menu-closer{
+        animation: menu_close_animator 0.5s ease-in forwards;
     }
 
     .close-menu{
@@ -79,5 +87,23 @@ export const Wrapper = styled.nav`
         flex-direction: column;
         justify-content: center;
         height: 100%;
+    }
+
+
+     @keyframes menu_open_animator {
+        from{
+            transform: translateX(-100%);
+        }   
+        to{
+            transform: translateX(0%);
+        }
+    }
+     @keyframes menu_close_animator {
+        from{
+            transform: translateX(0%);
+        }   
+        to{
+            transform: translateX(-100%);
+        }
     }
 `
