@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 
 export const Wrapper = styled.button`
-    width: ${(props) => props.width ? `${props.width}%` : '100%'};
+    width: ${(props) => props.width ? `${props.width}%` : ''};
     background-color: ${(props) => props.bgcolor === 'secondary' ? 'var(--seasalt)' : 'var(--primary)'};
 
     color: ${(props) => props.bgcolor === 'secondary' ? 'var(--primary)' : 'var(--seasalt)'};
