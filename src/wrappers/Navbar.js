@@ -5,7 +5,7 @@ export const Wrapper = styled.nav`
   height: 4.5rem;
   display: flex;
   padding: 0px 40px;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   flex-direction: row-reverse;
   background-color: var(--seasalt);
@@ -33,10 +33,11 @@ export const Wrapper = styled.nav`
     left: 0;
     height: 100%;
     padding: 10px;
-    background-color: var(--seasalt);
     transform: translateX(-100%);
+    background-color: var(--seasalt);
     transition: transform 0.5s ease-in;
-
+    display: none;
+    
     @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
       position: static;
       width: 60%;
@@ -48,6 +49,7 @@ export const Wrapper = styled.nav`
   }
 
   .open-menu {
+    display: none;
     @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
       display: none;
     }
