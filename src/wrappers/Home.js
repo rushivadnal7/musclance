@@ -15,7 +15,7 @@ export const Content = styled.div`
     .welcome-text{
       width: 100%;
       height: 10%;
-      font-size: 2rem;
+      font-size: 1.7rem;
     }
 
     .container{
@@ -38,7 +38,7 @@ export const Content = styled.div`
       border-radius: 10px;
 
       h1{
-        font-size: 2rem;
+        font-size: 1.7rem;
         font-weight: bold;
         padding: 10px;
       }
