@@ -5,6 +5,7 @@ import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
 import { ThemeProvider } from "styled-components";
 import Home from "./pages/Home";
+import MuscleBreakdown from "./Calculators/MuscleBreakdown";
 
 function App() {
   const route = createBrowserRouter([
@@ -23,6 +24,10 @@ function App() {
     {
       path: "/home",
       element: <Home/>,
+    },
+    {
+      path: "/musclebreakdown",
+      element: <MuscleBreakdown/>,
     },
   ]);
 

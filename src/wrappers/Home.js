@@ -10,7 +10,16 @@ export const Wrapper = styled.section`
 
 export const Content = styled.div`
   flex: 1; 
-  padding: 20px;
+  padding: 0px 20px;
+    .icon{
+      height: 10%;
+      width: 100%;
+
+      img{
+        height: 100%;
+        width: max-content;
+      }
+    }
   
     .welcome-text{
       width: 100%;
@@ -19,7 +28,7 @@ export const Content = styled.div`
     }
 
     .container{
-      height: 90%;
+      height: 80%;
       padding: 20px 0px;
       /* border: 1px solid red; */
       display: flex;
