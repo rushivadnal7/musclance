@@ -43,18 +43,25 @@ export const Content = styled.div`
       display: flex;
       flex-direction: column;
       justify-content: space-around;
-      background-color:   var(--third-color);
       border-radius: 10px;
-
+      
       h1{
         font-size: 1.7rem;
         font-weight: bold;
         padding: 10px;
       }
-
+      
       .description{
         padding: 10px;
       }
+
+    }
+    .musclebreakdown{
+      background-color:   var(--blue);
+    }
+    
+    .calorie{
+      background-color: var(--purple);
     }
 
     
