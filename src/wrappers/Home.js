@@ -11,5 +11,43 @@ export const Wrapper = styled.section`
 export const Content = styled.div`
   flex: 1; 
   padding: 20px;
+  
+    .welcome-text{
+      width: 100%;
+      height: 10%;
+      font-size: 2rem;
+    }
+
+    .container{
+      height: 90%;
+      padding: 20px 0px;
+      /* border: 1px solid red; */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .calculator{
+      width: 90%;
+      height: 12rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      background-color:   var(--third-color);
+      border-radius: 10px;
+
+      h1{
+        font-size: 2rem;
+        font-weight: bold;
+        padding: 10px;
+      }
+
+      .description{
+        padding: 10px;
+      }
+    }
+
+    
 `;
 

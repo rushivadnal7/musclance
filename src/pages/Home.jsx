@@ -4,22 +4,38 @@ import { Content, Wrapper } from "../wrappers/Home";
 import NavBar from "../components/NavBar";
 import MobileNavbar from "../components/MobileNavbar";
 
+// const CalculatorType = () => {
+//   return (
+//     <>
+//       <CalculatorType>
+
+//       </CalculatorType>
+//     </>
+//   );
+// };
+
 const Home = () => {
   return (
     <>
       <Wrapper>
-        {/* <NavBar /> */}
         <Content>
-          <div className="muscle-group-selectors">
-            <div className="chest-selector">Chest</div>
-            <div className="back-selector">Back</div>
-            <div className="triceps-selector">triceps</div>
-            <div className="biceps-selector">biceps</div>
-            <div className="legs-selector">Legs</div>
-            <div className="shoulder-selector">Shoulder</div>
+          <h1 className="welcome-text">Welcome back,</h1>
+          <div className="container">
+            <div className="calculator">
+              <h1>Muscle Breakdown</h1>
+              <div className="description">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              </div>
+            </div>
+            <div className="calculator">
+              <h1>Calorie counter</h1>
+              <div className="description">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              </div>
+            </div>
           </div>
         </Content>
-        <MobileNavbar/>
+        <MobileNavbar />
       </Wrapper>
     </>
   );

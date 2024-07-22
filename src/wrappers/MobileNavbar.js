@@ -3,6 +3,8 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
   width: 100%;
   height: 4.5rem;
+  position: fixed;
+  bottom: 0;
   background-color: var(--seasalt);
   display: flex;
   justify-content: space-evenly;
