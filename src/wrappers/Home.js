@@ -6,6 +6,7 @@ export const Wrapper = styled.section`
     display: flex;
     flex-direction: column;
 
+
 `
 
 export const Content = styled.div`
@@ -25,6 +26,7 @@ export const Content = styled.div`
       width: 100%;
       height: 10%;
       font-size: 1.7rem;
+      font-weight: 600;
     }
 
     .container{
@@ -57,11 +59,11 @@ export const Content = styled.div`
 
     }
     .musclebreakdown{
-      background-color:   var(--blue);
+      background-color:   var(--third-color);
     }
     
     .calorie{
-      background-color: var(--purple);
+      background-color: var(--third-color);
     }
 
     

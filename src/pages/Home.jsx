@@ -23,13 +23,13 @@ const Home = () => {
           <h1 className="welcome-text">Welcome,</h1>
           <div className="container">
             <div className="calculator musclebreakdown" onClick={() => clickHandler('musclebreakdown')}>
-              <h1>Muscle Breakdown</h1>
+              <h1>Muscle Breakdown Calculator</h1>
               <div className="description">
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
               </div>
             </div>
             <div className="calculator calorie" onClick={() => clickHandler('musclebreakdown')}>
-              <h1>Calorie counter</h1>
+              <h1>Calorie counter calculator</h1>
               <div className="description">
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
               </div>

@@ -1,11 +1,15 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  width: 100%;
+  width: 80%;
   height: 4.5rem;
   position: fixed;
-  bottom: 0;
-  background-color: var(--seasalt);
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 20px;
+  /* background-color: var(--seasalt); */
+  background-color: rgba(255,255,255,0.5);
+  border-radius: 20px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
