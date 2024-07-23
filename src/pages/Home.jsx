@@ -63,7 +63,7 @@ const Home = () => {
               <div className="data">30%</div>
             </div>
           </div>
-          <h1 className="container-title">Calculators :</h1>
+          <h1 className="container-title">Calculators</h1>
           <div className="calculator-container">
             <div
               className="calculator musclebreakdown"

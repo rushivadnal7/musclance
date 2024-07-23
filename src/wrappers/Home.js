@@ -8,7 +8,7 @@ export const Wrapper = styled.section`
 
 export const Content = styled.div`
   flex: 1;
-  padding: 15px;
+  padding: 20px;
   width: 100%;
   height: 100%;
   display: flex;
@@ -22,7 +22,7 @@ export const Content = styled.div`
   }
 
   .weekly-data {
-    height: 30%;
+    height: 35%;
     color: var(--primary);
     width: 100%;
     display: grid;
@@ -109,8 +109,10 @@ export const Content = styled.div`
 
   .container-title {
     width: 100%;
-    height: 10%;
+    height: 5%;
     font-size: 1.4rem;
+    display: flex;
+    align-items: end;
     font-weight: 600;
   }
   .calculator-container {
