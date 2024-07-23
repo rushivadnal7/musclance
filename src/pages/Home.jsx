@@ -74,7 +74,25 @@ const Home = () => {
                 }}
                 // onClick={() => clickHandler("musclebreakdown")}
               >
-                <h1>Muscle Breakdown Calculator</h1>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth="1.5"
+                  stroke="currentColor"
+                  className="size-12"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M12 4.5v15m7.5-7.5h-15"
+                  />
+                </svg>
+
+                <h1>
+                  Muscle Breakdown <br />
+                  Calculator
+                </h1>
               </div>
               <div
                 className="calculator calorie"
@@ -82,10 +100,28 @@ const Home = () => {
                   backgroundImage: `url(${calorie_bg})`,
                   backgroundRepeat: "no-repeat",
                   backgroundSize: "cover",
+                  
                 }}
                 // onClick={() => clickHandler("musclebreakdown")}
               >
-                <h1>Calorie counter calculator</h1>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth="1.5"
+                  stroke="currentColor"
+                  className="size-12"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M12 4.5v15m7.5-7.5h-15"
+                  />
+                </svg>
+
+                <h1>
+                  Calorie counter <br /> calculator
+                </h1>
               </div>
             </div>
           </div>

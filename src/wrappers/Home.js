@@ -122,7 +122,6 @@ export const Content = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    border: 1px solid red;
   }
   .calculator-container {
     height:80%;
@@ -139,24 +138,36 @@ export const Content = styled.div`
   }
 
   .calculator {
-    color: var(--seasalt);
+    color: var(--third-color);
     height: 80%;
     width: 80%;
     min-width: 10rem; 
+    display: flex;
+    align-items: end;
+    justify-content: center;
     flex: 0 0 auto; 
     border-radius: 10px;
+    position: relative;
+    padding: 15px ;
 
 
     h1 {
-      font-size: 1.7rem;
-      font-weight: bold;
+      font-size: 1.3rem;
+      text-shadow: 2px 2px var(--primary);
       
+    }
+
+    svg{
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      color: var(--third-color);
+      border-radius: 50%;
+      padding: 5px;
+      background-color: rgba(255,255,255,0.5);
     }
 
   }
 
-
-  .calorie {
-    color: var(--seasalt);
-  }
 `;

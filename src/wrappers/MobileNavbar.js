@@ -7,7 +7,6 @@ export const Wrapper = styled.div`
   left: 50%;
   transform: translateX(-50%);
   bottom: 20px;
-  /* background-color: var(--seasalt); */
   background-color: rgba(255,255,255,0.5);
   border-radius: 20px;
   display: flex;
