@@ -41,7 +41,7 @@ export const Content = styled.div`
       display: flex;
       height: 50%;
       padding: 10px;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
       font-weight: 600;
       justify-content: space-around;
       width: 100%;
@@ -66,7 +66,7 @@ export const Content = styled.div`
     
     .header{
       display: flex;
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       height: 50%;
       padding: 10px;
       font-weight: 600;
@@ -86,8 +86,8 @@ export const Content = styled.div`
   }
   
   .musclebreakdown-count {
-    border-radius: 30px;
-    height: 80%;
+    border-radius: 20px;
+    /* height: 80%; */
     grid-area: box3;
     background-color: var(--seasalt);
     padding: 10px;
@@ -96,12 +96,12 @@ export const Content = styled.div`
     align-items: center;
 
     span{
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       font-weight: 500;
     }
 
     .data{
-      font-size: 1.5rem;
+      font-size: 1.3rem;
       font-weight: 600;
     }
     
