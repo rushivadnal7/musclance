@@ -21,7 +21,7 @@ export const Wrapper = styled.div`
   }
 
   .active {
-    color: var(--seasalt);
+    color: var(--primary);
     border-radius: 30px;
     padding: 0.4rem;
     width: max-content;
