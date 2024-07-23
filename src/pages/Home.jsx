@@ -57,35 +57,36 @@ const Home = () => {
               <div className="data">777</div>
             </div>
             <div className="musclebreakdown-count">
-                <span>
-                  This week muscle breakdown 
-                </span>
+              <span>This week muscle breakdown</span>
               <div className="data">30%</div>
             </div>
           </div>
-          <h1 className="container-title">Calculators</h1>
-          <div className="calculator-container">
-            <div
-              className="calculator musclebreakdown"
-              style={{
-                backgroundImage: `url(${muscleBD_bg})`,
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "cover",
-              }}
-              // onClick={() => clickHandler("musclebreakdown")}
-            >
-              <h1>Muscle Breakdown Calculator</h1>
-            </div>
-            <div
-              className="calculator calorie"
-              style={{
-                backgroundImage: `url(${calorie_bg})`,
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "cover",
-              }}
-              // onClick={() => clickHandler("musclebreakdown")}
-            >
-              <h1>Calorie counter calculator</h1>
+
+          <div className="bottom-container">
+            <h1 className="container-title">Calculators</h1>
+            <div className="calculator-container">
+              <div
+                className="calculator musclebreakdown"
+                style={{
+                  backgroundImage: `url(${muscleBD_bg})`,
+                  backgroundRepeat: "no-repeat",
+                  backgroundSize: "cover",
+                }}
+                // onClick={() => clickHandler("musclebreakdown")}
+              >
+                <h1>Muscle Breakdown Calculator</h1>
+              </div>
+              <div
+                className="calculator calorie"
+                style={{
+                  backgroundImage: `url(${calorie_bg})`,
+                  backgroundRepeat: "no-repeat",
+                  backgroundSize: "cover",
+                }}
+                // onClick={() => clickHandler("musclebreakdown")}
+              >
+                <h1>Calorie counter calculator</h1>
+              </div>
             </div>
           </div>
         </Content>

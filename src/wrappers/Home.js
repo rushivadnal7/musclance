@@ -109,16 +109,26 @@ export const Content = styled.div`
 
   .container-title {
     width: 100%;
-    height: 5%;
+    height: 20%;
     font-size: 1.4rem;
     display: flex;
     align-items: end;
-    font-weight: 600;
+    font-weight: 500;
   }
-  .calculator-container {
+
+  .bottom-container{
     height: 50%;
     width: 100%;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid red;
+  }
+  .calculator-container {
+    height:80%;
+    width: 100%;
+    display: flex;
+    align-items: start;
     overflow-x: scroll;
     gap: 20px;
     flex-wrap: nowrap;
@@ -130,8 +140,8 @@ export const Content = styled.div`
 
   .calculator {
     color: var(--seasalt);
-    height: 60%;
-    width: 70%;
+    height: 80%;
+    width: 80%;
     min-width: 10rem; 
     flex: 0 0 auto; 
     border-radius: 10px;
