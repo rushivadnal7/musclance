@@ -6,7 +6,10 @@ import { useDrag } from "react-use-gesture";
 import background_image from "../assets/muscleBreakdownComponent_bg1.jpeg";
 import logo from "../assets/logo_icon.png";
 
+import { useNavigate } from "react-router-dom";
+
 const MuscleBreakdown = () => {
+  const navigate = useNavigate();
   const [{ x }, set] = useSpring(() => ({ x: 0 }));
 
   const bind = useDrag(
@@ -15,10 +18,13 @@ const MuscleBreakdown = () => {
       const buttonWidth = 130; 
       const maxMovement = sliderWidth - buttonWidth;
 
-      if (down && distance > maxMovement && dx > 0) {
+      const threshold = 260
+
+      if (down && distance > threshold && dx > 0) {
+        console.log('slded' + distance)
         cancel();
         set({ x: 0 });
-        console.log('slded')
+        navigate('/home')
       } else {
         set({ x: down ? Math.min(Math.max(mx, 0), maxMovement) : 0 });
       }
@@ -32,7 +38,7 @@ const MuscleBreakdown = () => {
           <img src={background_image} alt="" />
         </div>
         <div className="logo">
-          <img src={logo} alt="" />
+          <img src={logo} alt="logo" onClick={navigate('/home')} />
         </div>
 
         <div className="content">
