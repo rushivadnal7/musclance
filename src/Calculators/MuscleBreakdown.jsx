@@ -37,8 +37,8 @@ const MuscleBreakdown = () => {
         <div className="background-image">
           <img src={background_image} alt="" />
         </div>
-        <div className="logo">
-          <img src={logo} alt="logo" onClick={navigate('/home')} />
+        <div onClick={navigate('/home')} className="logo">
+          <img src={logo} alt="logo"  />
         </div>
 
         <div className="content">
