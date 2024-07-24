@@ -72,7 +72,7 @@ const Home = () => {
                   backgroundRepeat: "no-repeat",
                   backgroundSize: "cover",
                 }}
-                // onClick={() => clickHandler("musclebreakdown")}
+                onClick={() => clickHandler("musclebreakdown")}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -102,7 +102,7 @@ const Home = () => {
                   backgroundSize: "cover",
                   
                 }}
-                // onClick={() => clickHandler("musclebreakdown")}
+                onClick={() => clickHandler("musclebreakdown")}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

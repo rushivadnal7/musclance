@@ -7,7 +7,7 @@ export const Wrapper = styled.div`
   left: 50%;
   transform: translateX(-50%);
   bottom: 20px;
-  background-color: rgba(255,255,255,0.5);
+  background-color: rgba(255,255,255,0.2);
   border-radius: 20px;
   display: flex;
   justify-content: space-evenly;

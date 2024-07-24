@@ -138,7 +138,7 @@ export const Content = styled.div`
   }
 
   .calculator {
-    color: var(--third-color);
+    color: var(--seasalt);
     height: 80%;
     width: 80%;
     min-width: 10rem; 
@@ -162,10 +162,10 @@ export const Content = styled.div`
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%);
-      color: var(--third-color);
+      color: var(--seasalt);
       border-radius: 50%;
       padding: 5px;
-      background-color: rgba(255,255,255,0.5);
+      background-color: rgba(255,255,255,0.2);
     }
 
   }
