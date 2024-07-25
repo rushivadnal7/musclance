@@ -8,6 +8,7 @@ import back from '../../assets/back.png'
 import legs from '../../assets/legs.png'
 import shoulder from '../../assets/shoulder.png'
 
+
 const Musclegroup = () => {
   return (
    <>
@@ -39,6 +40,7 @@ const Musclegroup = () => {
                 <span>shoulder</span>
             </div>
         </div>
+        
      </Wrapper>
    </>
   )

@@ -10,39 +10,42 @@ export const Wrapper = styled.section`
     display: flex;
     align-items: center;
     height: 10%;
-    
   }
 
-  .back-arrow{
+  .back-arrow {
     width: 20%;
     display: flex;
     justify-content: center;
     align-items: center;
-    
-    
-    svg{
-        background-color: rgba(255, 255, 255, 0.2);
-        border-radius: 50%;
-        padding: 10px;
-        height: 60px;
-        width: 60px;
-    }
-}
 
-.progress-bar{
+    svg {
+      background-color: rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      padding: 10px;
+      height: 60px;
+      width: 60px;
+    }
+  }
+
+  .progress-bar {
     width: 80%;
     height: 0.5rem;
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 20px;
-}
+  }
 
-.progress-bar-inner{
+  .progress-bar-inner {
     height: 100%;
     border-radius: 20px;
     width: 25%;
     background-color: var(--third-color);
   }
 
+  .button {
+    font-size: 1.3rem;
+    font-weight: 600;
+    text-transform: capitalize;
+  }
 `;
 
 export const BackgroundImage = styled.div`

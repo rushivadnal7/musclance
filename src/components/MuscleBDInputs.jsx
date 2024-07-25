@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { BackgroundImage, Wrapper } from "../wrappers/MuscleBDInputs";
 import background_image from "../assets/muscleBreakdownComponent_bg1.jpeg";
 import Musclegroup from "./InputComponents/Musclegroup";
+import Button from './Button'
 
 const MuscleBDInputs = () => {
   const navigate = useNavigate();
@@ -40,7 +41,13 @@ const MuscleBDInputs = () => {
           </div>
         </div>
 
-        <Musclegroup/>
+        <Musclegroup />
+        <Button
+          text="next"
+          className="small-button button"
+          width={100}
+          bgcolor="secondary"
+        />
       </Wrapper>
     </>
   );
