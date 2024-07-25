@@ -1,49 +1,50 @@
-import React from 'react'
-import { Wrapper } from '../../wrappers/InputWrappers/MuscleGroup'
+import React, { useState } from "react";
+import { Wrapper } from "../../wrappers/InputWrappers/MuscleGroup";
 
-import bicep from '../../assets/biceps.png'
-import trciep from '../../assets/triceps.png'
-import chest from '../../assets/chest.png'
-import back from '../../assets/back.png'
-import legs from '../../assets/legs.png'
-import shoulder from '../../assets/shoulder.png'
-
+import bicep from "../../assets/bicep.png";
+import tricep from "../../assets/tricep.png";
+import chest from "../../assets/chest.png";
+import back from "../../assets/back.png";
+import legs from "../../assets/leg.png";
+import shoulder from "../../assets/shoulder.png";
 
 const Musclegroup = () => {
-  return (
-   <>
-     <Wrapper>
-        <span className='title'>Select Muscle Group</span>
-        <div className="muscle-group-container">
-            <div className="bicep muscle">
-                <img src={bicep} alt="bicep" />
-                <span>bicep</span>
-            </div>
-            <div className="tricep muscle">
-                <img src={trciep} alt="tricep" />
-                <span>tricep</span>
-            </div>
-            <div className="chest muscle">
-                <img src={chest} alt="chest" />
-                <span>chest</span>
-            </div>
-            <div className="back muscle">
-                <img src={back} alt="back" />
-                <span>back</span>
-            </div>
-            <div className="legs muscle">
-                <img src={legs} alt="legs" />
-                <span>legs</span>
-            </div>
-            <div className="shoulder muscle">
-                <img src={shoulder} alt="shoulder" />
-                <span>shoulder</span>
-            </div>
-        </div>
-        
-     </Wrapper>
-   </>
-  )
-}
+  const musclesArray = [
+    { title: "bicep", image: bicep },
+    { title: "tricep" , image : tricep},
+    { title : "chest" , image : chest},
+    { title : "shoulder" , image : shoulder},
+    {title : "back" , image : back},
+    {title : "legs" , image : legs},
+  ];
 
-export default Musclegroup
+  const [click, setClick ] = useState(null);
+
+
+  const clickHandler = (muscle) => {
+    setClick(muscle)
+  }
+
+
+  return (
+    <>
+      <Wrapper>
+        <span className="title">Select Muscle Group</span>
+        <div className="muscle-group-container">
+          {musclesArray.map((val, index) => {
+            return (
+              <>
+                <div className={`${val.title} muscle`} onClick={() => clickHandler(val.title)} key={index}>
+                  <img src={val.image} className={`${click === val.title ? 'muscle-clicked' : ''}`} alt={`${val.title}`} />
+                  <span className={`${click === val.title ? 'muscle-clicked' : ''}`}>{val.title}</span>
+                </div>
+              </>
+            );
+          })}
+        </div>
+      </Wrapper>
+    </>
+  );
+};
+
+export default Musclegroup;
