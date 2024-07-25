@@ -24,7 +24,7 @@ const MuscleBreakdown = () => {
         console.log('slded' + distance)
         cancel();
         set({ x: 0 });
-        navigate('/home')
+        navigate('/mbdtracker')
       } else {
         set({ x: down ? Math.min(Math.max(mx, 0), maxMovement) : 0 });
       }
@@ -37,7 +37,7 @@ const MuscleBreakdown = () => {
         <div className="background-image">
           <img src={background_image} alt="" />
         </div>
-        <div onClick={navigate('/home')} className="logo">
+        <div onClick={() => navigate('/home')} className="logo">
           <img src={logo} alt="logo"  />
         </div>
 
