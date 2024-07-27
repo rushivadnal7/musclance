@@ -10,7 +10,7 @@ const Bar = styled.div`
   overflow: hidden;
 
   .percent-div {
-    background-color: green;
+    background-color: var(--third-color);
     width: ${(props) => props.percent}%;
     height: 100%;
     transition: width 0.1s linear;

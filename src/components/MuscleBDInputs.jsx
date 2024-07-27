@@ -1,12 +1,36 @@
-import React from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 import { BackgroundImage, Wrapper } from "../wrappers/MuscleBDInputs";
 import background_image from "../assets/muscleBreakdownComponent_bg1.jpeg";
 import Musclegroup from "./InputComponents/Musclegroup";
-import Button from './Button'
+import Button from "./Button";
+import ProgressBar from "./ProgressBar";
+import ExerciseSelect from "./InputComponents/ExerciseSelect";
 
 const MuscleBDInputs = () => {
   const navigate = useNavigate();
+  // const {currentRoute} = useParams()
+  // console.log(currentRoute)
+
+  const [selectedMuscle, setSelectedMuscle] = useState(null);
+  const [showErrors, setShowErrors] = useState(false);
+  const [InputContent, setInputContent] = useState("musclegroup");
+
+  const muscleGroupSelector = (muscle) => {
+    setSelectedMuscle(muscle);
+  };
+
+  const NextButtonHandler = () => {
+    if (selectedMuscle === null) {
+      setShowErrors(true);
+    } else {
+      setInputContent("exercises");
+    }
+  };
+
+  const progresBarHandler = () => {
+    setShowErrors(false);
+  };
 
   return (
     <>
@@ -15,10 +39,24 @@ const MuscleBDInputs = () => {
       </BackgroundImage>
 
       <Wrapper>
+        {showErrors && (
+          <div className="error-container">
+            <span>Select a muscle group</span>
+            <ProgressBar
+              maxValue={5}
+              width={"100"}
+              onComplete={progresBarHandler}
+            />
+          </div>
+        )}
         <div className="header">
           <div
             className="back-arrow"
-            onClick={() => navigate("/musclebreakdown")}
+            onClick={() => {
+              InputContent === "exercises"
+                ? setInputContent("musclegroup")
+                : navigate(`/musclebreakdown`);
+            }}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -41,12 +79,18 @@ const MuscleBDInputs = () => {
           </div>
         </div>
 
-        <Musclegroup />
+        {InputContent === "musclegroup" ? (
+          <Musclegroup selectedMuscleGroup={muscleGroupSelector} />
+        ) : (
+          <ExerciseSelect />
+        )}
+
         <Button
           text="next"
           className="small-button button"
           width={100}
           bgcolor="secondary"
+          onClick={NextButtonHandler}
         />
       </Wrapper>
     </>

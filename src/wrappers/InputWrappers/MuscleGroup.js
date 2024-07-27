@@ -20,10 +20,6 @@ export const Wrapper = styled.div`
 
     .muscle-group-container{
         height: fit-content;
-        /* position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%); */
         width: 100%;
         display: flex;
         flex-wrap: wrap;
