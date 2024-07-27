@@ -5,7 +5,7 @@ export const Wrapper = styled.div`
     height: 80%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     padding: 2rem 0px;
     position: relative;
 
@@ -28,7 +28,7 @@ export const Wrapper = styled.div`
         display: flex;
         flex-wrap: wrap;
         gap: 1rem;
-        justify-content: space-around;
+        justify-content: center;
     }
 
     .muscle{
