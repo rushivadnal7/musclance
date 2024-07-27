@@ -24,8 +24,8 @@ export const Wrapper = styled.section`
         background-color: rgba(255, 255, 255, 0.2);
         border-radius: 50%;
         padding: 10px;
-        height: 60px;
-        width: 60px;
+        height: 50px;
+        width: 50px;
     }
 }
 

@@ -5,23 +5,25 @@ export const Wrapper = styled.div`
     height: 80%;
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: center;
     padding: 2rem 0px;
     position: relative;
+
+
 
     .title{
         font-size: 2rem;
         font-weight: 600;
-        height: 30%;
-        justify-self: flex-start;
+        height: 10%;
+        text-align: center;
     }
 
     .muscle-group-container{
         height: fit-content;
-        position: absolute;
+        /* position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%,-50%);
+        transform: translate(-50%,-50%); */
         width: 100%;
         display: flex;
         flex-wrap: wrap;
