@@ -27,7 +27,7 @@ export const Wrapper = styled.div`
         width: 100%;
         display: flex;
         flex-wrap: wrap;
-        gap: 2.5rem;
+        gap: 1rem;
         justify-content: center;
     }
 
