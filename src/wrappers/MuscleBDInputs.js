@@ -37,8 +37,15 @@ export const Wrapper = styled.section`
   .progress-bar-inner {
     height: 100%;
     border-radius: 20px;
-    width: 25%;
     background-color: var(--third-color);
+  }
+  
+  .width-80{
+    width: 80%;
+  }
+
+  .width-40{
+    width: 40%;
   }
 
   .button {

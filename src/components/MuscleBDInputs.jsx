@@ -49,7 +49,7 @@ const MuscleBDInputs = () => {
             />
           </div>
         )}
-        <div className="header">
+        <div className="header" style={{ opacity: showErrors ? 0.3 : "" }}>
           <div
             className="back-arrow"
             onClick={() => {
@@ -74,13 +74,19 @@ const MuscleBDInputs = () => {
             </svg>
           </div>
 
-          <div className="progress-bar">
-            <div className="progress-bar-inner"></div>
+          <div
+            className="progress-bar"
+          >
+            <div
+              className={`progress-bar-inner ${
+                InputContent === "exercises" ? "width-80" : "width-40"
+              }`}
+            ></div>
           </div>
         </div>
 
         {InputContent === "musclegroup" ? (
-          <Musclegroup selectedMuscleGroup={muscleGroupSelector} />
+          <Musclegroup selectedMuscleGroup={muscleGroupSelector}  style={`${showErrors? '0.3' : '1' }`} />
         ) : (
           <ExerciseSelect />
         )}
@@ -91,6 +97,8 @@ const MuscleBDInputs = () => {
           width={100}
           bgcolor="secondary"
           onClick={NextButtonHandler}
+          disable={showErrors ? true : false}
+          style={`${showErrors? '0.3' : '1' }`}
         />
       </Wrapper>
     </>

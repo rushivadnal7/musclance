@@ -1,10 +1,31 @@
 import React from "react";
 import { Wrapper } from "../wrappers/Button";
 
-const Button = ({ text, className , onClick , bgcolor , type, width , svg} , ) => {
+const Button = ({
+  text,
+  className,
+  onClick,
+  bgcolor,
+  type,
+  width,
+  svg,
+  disable,
+  style,
+}) => {
   return (
     <>
-      <Wrapper type={type} width={width} bgcolor={bgcolor} onClick={onClick} className={`${className}`}>{text}{svg}</Wrapper>
+      <Wrapper
+        disabled={disable}
+        style={{ opacity: style }}
+        type={type}
+        width={width}
+        bgcolor={bgcolor}
+        onClick={onClick}
+        className={`${className}`}
+      >
+        {text}
+        {svg}
+      </Wrapper>
     </>
   );
 };

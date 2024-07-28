@@ -8,7 +8,7 @@ import back from "../../assets/back.png";
 import legs from "../../assets/leg.png";
 import shoulder from "../../assets/shoulder.png";
 
-const Musclegroup = ({selectedMuscleGroup}) => {
+const Musclegroup = ({selectedMuscleGroup , style}) => {
   const musclesArray = [
     { title: "bicep", image: bicep },
     { title: "tricep", image: tricep },
@@ -27,7 +27,7 @@ const Musclegroup = ({selectedMuscleGroup}) => {
 
   return (
     <>
-      <Wrapper>
+      <Wrapper style={{opacity:style}}>
         <span className="title">Select Muscle Group</span>
         <div className="muscle-group-container">
           {musclesArray.map((val, index) => {
