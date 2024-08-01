@@ -27,7 +27,7 @@ const Musclegroup = ({selectedMuscleGroup , style}) => {
 
   return (
     <>
-      <Wrapper style={{opacity:style}}>
+      <Wrapper>
         <span className="title">Select Muscle Group</span>
         <div className="muscle-group-container">
           {musclesArray.map((val, index) => {

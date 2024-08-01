@@ -9,8 +9,7 @@ import ExerciseSelect from "./InputComponents/ExerciseSelect";
 
 const MuscleBDInputs = () => {
   const navigate = useNavigate();
-  // const {currentRoute} = useParams()
-  // console.log(currentRoute)
+
 
   const [selectedMuscle, setSelectedMuscle] = useState(null);
   const [showErrors, setShowErrors] = useState(false);
@@ -88,7 +87,7 @@ const MuscleBDInputs = () => {
         {InputContent === "musclegroup" ? (
           <Musclegroup selectedMuscleGroup={muscleGroupSelector}  style={`${showErrors? '0.3' : '1' }`} />
         ) : (
-          <ExerciseSelect />
+          <ExerciseSelect muscle={selectedMuscle} />
         )}
 
         <Button
