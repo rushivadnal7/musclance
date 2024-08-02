@@ -1,6 +1,5 @@
 import React from "react";
 import { Wrapper } from "../wrappers/Musclebreakdown";
-
 import { useSpring, animated } from "react-spring";
 import { useDrag } from "react-use-gesture";
 import background_image from "../assets/muscleBreakdownComponent_bg1.jpeg";

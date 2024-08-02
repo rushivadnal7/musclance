@@ -2,9 +2,10 @@ import styled from "styled-components";
 
 export const Wrapper = styled.div`
     width: 40%;
-    height: fit-content;
+    height: 250px;
+
 
     img{
-        border-radius: 20px;
+        border-radius: 10px;
     }
 `
