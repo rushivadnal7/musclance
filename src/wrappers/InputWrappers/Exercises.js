@@ -5,7 +5,9 @@ export const Wrapper = styled.div`
     height: 250px;
     text-align: center;
     margin: 0.5rem;
-    border: 2px solid gray;
+    border: 2px solid var(--third-color);
+    padding: 10px;
+    border-radius: 8px;
 
     h1{
         height: 10%;
