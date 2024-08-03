@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 
 export const Wrapper = styled.div`
-  width: 100%;
+ width: 100%;
   height: 250px;
   text-align: center;
   margin: 0.5rem;
@@ -42,6 +42,30 @@ export const Wrapper = styled.div`
     right: 0;
     gap: 20px;
     z-index: 2;
+    display: flex;
+    flex-direction: column;
+
+    .bezel {
+      position: relative;
+      width: 100px;
+      height: 100px;
+      border: 5px solid var(--primary);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      margin-bottom: 10px;
+    }
+
+    .marker {
+      width: 10px;
+      height: 10px;
+      background-color: var(--seasalt);
+      border-radius: 50%;
+      position: absolute;
+      top: -5px;
+    }
 
     input {
       background-color: var(--seasalt);
@@ -50,27 +74,7 @@ export const Wrapper = styled.div`
       height: 3.5rem;
       padding: 8px;
       border-radius: 5px;
+      margin-top: 10px;
     }
-  }
-
-  .bezel {
-    position: relative;
-    width: 100px;
-    height: 100px;
-    border: 5px solid var(--primary);
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-  }
-
-  .marker {
-    width: 10px;
-    height: 10px;
-    background-color: var(--seasalt);
-    border-radius: 50%;
-    position: absolute;
-    top: -5px;
   }
 `;

@@ -3,7 +3,6 @@ import { Wrapper } from "../../wrappers/InputWrappers/Exercises";
 
 const Exercises = ({ image, name }) => {
   const [drawerOpen, setDrawerOpen] = useState(false);
-  const [angle, setAngle] = useState(0);
   const [sets, setSets] = useState(1);
   const [reps, setReps] = useState(1);
 
@@ -11,23 +10,20 @@ const Exercises = ({ image, name }) => {
     setDrawerOpen(!drawerOpen);
   };
 
-  const handleRotation = (e) => {
-    const { clientX, clientY } = e.touches ? e.touches[0] : e;
-    const { left, top, width, height } = e.target.getBoundingClientRect();
-    const x = clientX - (left + width / 2);
+  const handleRotation = (e, type) => {
+    const { clientY } = e.touches ? e.touches[0] : e;
+    const { top, height } = e.target.getBoundingClientRect();
     const y = clientY - (top + height / 2);
-    const newAngle = Math.atan2(y, x) * (180 / Math.PI);
-    setAngle(newAngle);
-
-    // Example logic to set reps and sets based on angle
-    const newSets = Math.min(6, Math.max(1, Math.floor((newAngle + 360) / 60)));
-    const newReps = Math.min(
-      25,
-      Math.max(1, Math.floor((newAngle + 360) / 15))
+    const newValue = Math.min(
+      type === "sets" ? 6 : 25,
+      Math.max(1, Math.floor(y / 10) + 1)
     );
 
-    setSets(newSets);
-    setReps(newReps);
+    if (type === "sets") {
+      setSets(newValue);
+    } else {
+      setReps(newValue);
+    }
   };
 
   return (
@@ -35,22 +31,25 @@ const Exercises = ({ image, name }) => {
       <Wrapper>
         <div className="exercise-image" onClick={drawerHandler}>
           <h1>{name}</h1>
-          <img src={image} alt="" />
+          <img src={image} alt={name} />
         </div>
-        <div
-          onClick={drawerHandler}
-          className={`exercise-details ${drawerOpen ? "flex" : "hidden"}`}
-        >
+        <div className={`exercise-details ${drawerOpen ? "flex" : "hidden"}`}>
           <div
             className="bezel"
-            style={{ transform: `rotate(${angle}deg)` }}
-            onMouseMove={handleRotation}
-            onTouchMove={handleRotation}
+            onMouseMove={(e) => handleRotation(e, "sets")}
+            onTouchMove={(e) => handleRotation(e, "sets")}
           >
             <div className="marker"></div>
+            <input type="number" placeholder="sets" value={sets} readOnly />
           </div>
-          <input type="number" placeholder="set" value={sets} readOnly />
-          <input type="number" placeholder="reps" value={reps} readOnly />
+          <div
+            className="bezel"
+            onMouseMove={(e) => handleRotation(e, "reps")}
+            onTouchMove={(e) => handleRotation(e, "reps")}
+          >
+            <div className="marker"></div>
+            <input type="number" placeholder="reps" value={reps} readOnly />
+          </div>
         </div>
       </Wrapper>
     </>
