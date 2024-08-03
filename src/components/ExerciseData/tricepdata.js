@@ -1,6 +1,6 @@
 import cableOverHeadExtension from '../../exercisesAssets/tricep/cable overhead extension.png'
 import cablePushdown from '../../exercisesAssets/tricep/cable pushdown.png'
-import dumbellOverheadExtension from '../../exercisesAssets/tricep/dumbell overhead  extension.png'
+import dumbellOverheadExtension from '../../exercisesAssets/tricep/dumbell overhead extension.png'
 import skullCrusher from '../../exercisesAssets/tricep/dumbell skull crusher.png'
 import highCableOverheadExtension from '../../exercisesAssets/tricep/high cable over head extension.png'
 import kickBack from '../../exercisesAssets/tricep/kick back.png'

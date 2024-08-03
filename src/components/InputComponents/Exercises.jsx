@@ -6,7 +6,7 @@ const Exercises = ({image , name}) => {
   return (
     <>
       <Wrapper>
-        <h2>{name}</h2>
+        <h1>{name}</h1>
         <img src={image} alt="" />
       </Wrapper>
     </>
