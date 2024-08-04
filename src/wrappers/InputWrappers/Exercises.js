@@ -42,39 +42,28 @@ export const Wrapper = styled.div`
     right: 0;
     gap: 20px;
     z-index: 2;
-    display: flex;
     flex-direction: column;
 
-    .bezel {
-      position: relative;
-      width: 100px;
-      height: 100px;
-      border: 5px solid var(--primary);
-      border-radius: 50%;
+    .sets {
       display: flex;
-      justify-content: center;
+      flex-direction: column;
       align-items: center;
-      cursor: pointer;
-      margin-bottom: 10px;
     }
 
-    .marker {
-      width: 10px;
-      height: 10px;
-      background-color: var(--seasalt);
-      border-radius: 50%;
-      position: absolute;
-      top: -5px;
-    }
-
-    input {
-      background-color: var(--seasalt);
-      width: 5rem;
+    .bezel {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
       color: var(--primary);
-      height: 3.5rem;
-      padding: 8px;
-      border-radius: 5px;
-      margin-top: 10px;
+
+      .previous-value, .next-value {
+        cursor: pointer;
+      }
+
+      .main-value {
+        font-size: 1.5rem;
+      }
     }
   }
 `;
