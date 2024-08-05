@@ -33,7 +33,7 @@ export const Wrapper = styled.div`
   .exercise-details {
     background-color: var(--third-color);
     border-radius: 8px;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     width: 100%;
     height: 100%;
@@ -42,12 +42,20 @@ export const Wrapper = styled.div`
     right: 0;
     gap: 20px;
     z-index: 2;
-    flex-direction: column;
+    /* flex-direction: column; */
 
-    .sets {
+    .sets , .reps {
+      height: 100%;
       display: flex;
       flex-direction: column;
+      justify-content: center;
       align-items: center;
+      gap: 10px;
+
+      span{
+        font-size: 1.3rem;
+        letter-spacing: 2px;
+      }
     }
 
     .bezel {
