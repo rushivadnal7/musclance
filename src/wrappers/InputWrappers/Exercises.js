@@ -1,8 +1,7 @@
 import styled from "styled-components";
 
-
 export const Wrapper = styled.div`
- width: 100%;
+  width: 100%;
   height: 250px;
   text-align: center;
   margin: 0.5rem;
@@ -30,6 +29,14 @@ export const Wrapper = styled.div`
     }
   }
 
+  .open-drawer {
+    display: flex;
+    animation: ${(props) => (props.animationEnabled ? 'drawerOpenner 1s ease-in forwards' : 'none')};
+  }
+  .close-drawer {
+    display: none;
+  }
+
   .exercise-details {
     background-color: var(--third-color);
     border-radius: 8px;
@@ -44,7 +51,15 @@ export const Wrapper = styled.div`
     z-index: 2;
     flex-direction: column;
 
-    .sets , .reps {
+    .close-slider {
+      position: absolute;
+      top: 5%;
+      right: 20px;
+      color: var(--primary);
+    }
+
+    .sets,
+    .reps {
       height: 50%;
       width: 100%;
       display: flex;
@@ -53,7 +68,7 @@ export const Wrapper = styled.div`
       align-items: center;
       gap: 10px;
 
-      span{
+      span {
         font-size: 1.4rem;
         color: var(--primary);
         letter-spacing: 2px;
@@ -62,13 +77,13 @@ export const Wrapper = styled.div`
 
     .bezel {
       display: flex;
-      /* flex-direction: column; */
       align-items: center;
       gap: 15px;
       font-size: 1.3rem;
       color: var(--primary);
 
-      .previous-value, .next-value {
+      .previous-value,
+      .next-value {
         cursor: pointer;
       }
 
@@ -78,4 +93,14 @@ export const Wrapper = styled.div`
       }
     }
   }
+
+  @keyframes drawerOpenner {
+    0% {
+      right: -150%;
+    }
+    100% {
+      right: 0;
+    }
+  }
+
 `;

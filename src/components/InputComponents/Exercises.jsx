@@ -3,6 +3,7 @@ import { Wrapper } from "../../wrappers/InputWrappers/Exercises";
 
 const Exercises = ({ image, name }) => {
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const [animationEnabled, setAnimationEnabled] = useState(false);
   const [currentSet, setCurrentSet] = useState(1);
   const [currentRep, setCurrentRep] = useState(1);
 
@@ -13,6 +14,7 @@ const Exercises = ({ image, name }) => {
   const getRepsNextValue = (value) => (value === 25 ? 1 : value + 1);
 
   const drawerHandler = () => {
+    setAnimationEnabled(true);
     setDrawerOpen(!drawerOpen);
   };
 
@@ -57,12 +59,33 @@ const Exercises = ({ image, name }) => {
 
   return (
     <>
-      <Wrapper>
-        <div className="exercise-image" onClick={drawerHandler}>
+      <Wrapper animationEnabled={animationEnabled}>
+        <div className={`exercise-image`} onClick={drawerHandler}>
           <h1>{name}</h1>
           <img src={image} alt={name} />
         </div>
-        <div className={`exercise-details ${drawerOpen ? "flex" : "hidden"}`}>
+        <div
+          className={`exercise-details ${
+            drawerOpen ? "open-drawer" : "close-drawer"
+          }`}
+        >
+          <div className={`close-slider `} onClick={drawerHandler}>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="1.5"
+              stroke="currentColor"
+              className="size-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M6 18 18 6M6 6l12 12"
+              />
+            </svg>
+          </div>
+
           <div
             className="sets flex"
             onTouchStart={onTouchStart}
