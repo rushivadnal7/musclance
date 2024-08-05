@@ -60,9 +60,9 @@ export const Wrapper = styled.div`
 
     .bezel {
       display: flex;
-      flex-direction: column;
+      /* flex-direction: column; */
       align-items: center;
-      gap: 5px;
+      gap: 15px;
       color: var(--primary);
 
       .previous-value, .next-value {

@@ -39,10 +39,10 @@ const Exercises = ({ image, name }) => {
 
   const onTouchStart = (e) => {
     setTouchEnd(null);
-    setTouchStart(e.targetTouches[0].clientY);
+    setTouchStart(e.targetTouches[0].clientX);
   };
 
-  const onTouchMove = (e) => setTouchEnd(e.targetTouches[0].clientY);
+  const onTouchMove = (e) => setTouchEnd(e.targetTouches[0].clientX);
 
   const onTouchEnd = (handler) => {
     if (!touchStart || !touchEnd) return;
