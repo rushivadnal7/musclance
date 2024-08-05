@@ -60,7 +60,7 @@ const Exercises = ({ image, name }) => {
   return (
     <>
       <Wrapper animationEnabled={animationEnabled}>
-        <div className={`exercise-image`} onClick={drawerHandler}>
+        <div className={`exercise-image ${drawerOpen ? 'blur-sm' : ''}`} onClick={drawerHandler}>
           <h1>{name}</h1>
           <img src={image} alt={name} />
         </div>

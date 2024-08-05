@@ -5,7 +5,8 @@ export const Wrapper = styled.div`
   height: 250px;
   text-align: center;
   margin: 0.5rem;
-  border: 2px solid var(--third-color);
+  background-color: rgba(255,255,255,0.1);
+  /* border: 2px solid var(--third-color); */
   padding: 10px;
   border-radius: 8px;
   position: relative;
@@ -38,7 +39,7 @@ export const Wrapper = styled.div`
   }
 
   .exercise-details {
-    background-color: var(--third-color);
+    background-color: rgba(255,255,255,0.7);
     border-radius: 8px;
     justify-content: space-around;
     align-items: center;
