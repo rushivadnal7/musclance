@@ -39,7 +39,7 @@ export const Wrapper = styled.div`
   }
 
   .exercise-details {
-    background-color: rgba(255,255,255,0.7);
+    background-color: rgba(255,255,255,0.3);
     border-radius: 8px;
     justify-content: space-around;
     align-items: center;
@@ -71,6 +71,8 @@ export const Wrapper = styled.div`
 
       span {
         font-size: 1.4rem;
+        font-weight: 500;
+        text-transform: uppercase;
         color: var(--primary);
         letter-spacing: 2px;
       }
@@ -80,17 +82,19 @@ export const Wrapper = styled.div`
       display: flex;
       align-items: center;
       gap: 15px;
-      font-size: 1.3rem;
-      color: var(--primary);
-
+      
       .previous-value,
       .next-value {
+        color: var(--gray);
+        font-size: 1.3rem;
         cursor: pointer;
+        
       }
 
       .main-value {
         font-size: 2.5rem;
         font-weight: 600;
+        color: var(--third-color);
       }
     }
   }
