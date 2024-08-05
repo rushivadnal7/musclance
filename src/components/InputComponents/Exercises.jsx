@@ -55,15 +55,17 @@ const Exercises = ({ image, name }) => {
           <img src={image} alt={name} />
         </div>
         <div className={`exercise-details ${drawerOpen ? "flex" : "hidden"}`}>
-          <div className="sets flex">
+          <div
+            className="sets flex"
+            onTouchStart={onTouchStart}
+            onTouchMove={onTouchMove}
+            onTouchEnd={onTouchEnd}
+          >
             <span>sets</span>
             <div className="bezel">
               <div
                 className="previous-value"
                 onClick={() => handleRotate("down")}
-                onTouchStart={onTouchStart}
-                onTouchMove={onTouchMove}
-                onTouchEnd={onTouchEnd}
               >
                 {getPreviousValue(currentValue)}
               </div>
