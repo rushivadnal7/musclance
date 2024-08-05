@@ -42,11 +42,11 @@ export const Wrapper = styled.div`
     right: 0;
     gap: 20px;
     z-index: 2;
-    /* flex-direction: column; */
+    flex-direction: column;
 
     .sets , .reps {
-      height: 100%;
-      width: 50%;
+      height: 50%;
+      width: 100%;
       display: flex;
       flex-direction: column;
       justify-content: center;
