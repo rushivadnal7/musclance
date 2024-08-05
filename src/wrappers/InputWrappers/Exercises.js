@@ -46,6 +46,7 @@ export const Wrapper = styled.div`
 
     .sets , .reps {
       height: 100%;
+      width: 50%;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -53,7 +54,8 @@ export const Wrapper = styled.div`
       gap: 10px;
 
       span{
-        font-size: 1.3rem;
+        font-size: 1.4rem;
+        color: var(--primary);
         letter-spacing: 2px;
       }
     }
@@ -63,6 +65,7 @@ export const Wrapper = styled.div`
       /* flex-direction: column; */
       align-items: center;
       gap: 15px;
+      font-size: 1.3rem;
       color: var(--primary);
 
       .previous-value, .next-value {
@@ -70,7 +73,8 @@ export const Wrapper = styled.div`
       }
 
       .main-value {
-        font-size: 1.5rem;
+        font-size: 2.5rem;
+        font-weight: 600;
       }
     }
   }
