@@ -28,6 +28,14 @@ export const Wrapper = styled.div`
       height: 85%;
       border-radius: 5px;
     }
+
+    .sets-reps-display{
+      /* display: flex; */
+      flex-direction: column;
+      position: absolute;
+      bottom: 10px;
+      right: 10px;
+    }
   }
 
   .open-drawer {
@@ -41,16 +49,15 @@ export const Wrapper = styled.div`
   .exercise-details {
     background-color: rgba(255,255,255,0.3);
     border-radius: 8px;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    flex-direction: column;
     width: 100%;
     height: 100%;
     position: absolute;
     top: 0;
     right: 0;
-    gap: 20px;
     z-index: 2;
-    flex-direction: column;
 
     .close-slider {
       position: absolute;
@@ -59,10 +66,43 @@ export const Wrapper = styled.div`
       color: var(--primary);
     }
 
+    .weight-div{
+      height: 50%;
+      width: 100%;
+      grid-area: weight;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+
+      span{
+        font-size: 1.4rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: var(--primary);
+        letter-spacing: 2px;
+      }
+      
+      input{
+        background-color: transparent;
+        border: 1px solid var(--primary);
+        font-weight: 500;
+        color: var(--primary);
+        width: 3rem;
+        outline: none;
+        padding: 5px;
+        border-radius: 6px;
+      }
+    } 
+
+    .container{
+      display: flex;
+      align-items: center;
+    }
     .sets,
     .reps {
       height: 50%;
-      width: 100%;
+      width: 50%;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -85,7 +125,8 @@ export const Wrapper = styled.div`
       
       .previous-value,
       .next-value {
-        color: var(--gray);
+        color: var(--primary);
+        font-weight: 500;
         font-size: 1.3rem;
         cursor: pointer;
         

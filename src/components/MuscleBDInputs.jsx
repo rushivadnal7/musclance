@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { BackgroundImage, Wrapper } from "../wrappers/MuscleBDInputs";
 import background_image from "../assets/muscleBreakdownComponent_bg1.jpeg";
@@ -6,11 +6,12 @@ import Musclegroup from "./InputComponents/Musclegroup";
 import Button from "./Button";
 import ProgressBar from "./ProgressBar";
 import ExerciseSelect from "./InputComponents/ExerciseSelect";
+import { Context } from "../Context/MyContext";
 
 const MuscleBDInputs = () => {
   const navigate = useNavigate();
 
-
+  const {WorkOutData, setWorkoutData} = useContext(Context);
   const [selectedMuscle, setSelectedMuscle] = useState(null);
   const [showErrors, setShowErrors] = useState(false);
   const [InputContent, setInputContent] = useState("musclegroup");
@@ -26,6 +27,10 @@ const MuscleBDInputs = () => {
       setInputContent("exercises");
     }
   };
+  
+  const TrackButtonHandler = () => {
+    console.log(WorkOutData)
+  }
 
   const progresBarHandler = () => {
     setShowErrors(false);
@@ -85,17 +90,17 @@ const MuscleBDInputs = () => {
         </div>
 
         {InputContent === "musclegroup" ? (
-          <Musclegroup selectedMuscleGroup={muscleGroupSelector}  style={`${showErrors? '0.3' : '1' }`} />
+          <Musclegroup selectedMuscleGroup={muscleGroupSelector}  />
         ) : (
           <ExerciseSelect muscle={selectedMuscle} />
         )}
 
         <Button
-          text="next"
+          text={InputContent === "musclegroup" ? 'Next' : 'Track'}
           className="small-button button"
           width={100}
           bgcolor="secondary"
-          onClick={NextButtonHandler}
+          onClick={InputContent === "musclegroup" ? NextButtonHandler : TrackButtonHandler}
           disable={showErrors ? true : false}
           style={`${showErrors? '0.3' : '1' }`}
         />
