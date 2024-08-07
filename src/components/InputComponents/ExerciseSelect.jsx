@@ -13,15 +13,17 @@ const ExerciseSelect = ({ muscle }) => {
     setExerciseData((prevData) => ({
       ...prevData,
       [Data.name]: {
-        'muscle group' : muscle,
+        name: Data.name,
+        'musclegroup' : muscle,
+        weight : Data.weight,
         sets: Data.sets,
         reps: Data.reps,
+        
       },
     }));
   };
 
-  // console.log(exerciseData)
-  setWorkoutData(exerciseData)
+  setWorkoutData(exerciseData) 
 
   return (
     <>

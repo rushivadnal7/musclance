@@ -18,27 +18,27 @@ const chestExercises = [
         image : pushups,
     },
     {
-        name : 'Flat Barbell bench press',
+        name : 'Flat barbell bench press',
         image : flatBarbell,
     },
     {
-        name : 'Incline Barbell bench press',
+        name : 'Incline barbell bench press',
         image : inclineBarbell,
     },
     {
-        name : 'Decline Barbell bench press',
+        name : 'Decline barbell bench press',
         image : declineBarbell,
     },
     {
-        name : 'Flat Dumbell bench press',
+        name : 'Flat dumbell bench press',
         image : flatDB,
     },
     {
-        name : 'Incline Dumbell bench press',
+        name : 'Incline dumbell bench press',
         image : inclineDB,
     },
     {
-        name : 'Decline Dumbell bench press',
+        name : 'Decline dumbell bench press',
         image : declineDB,
     },
     {
@@ -46,23 +46,23 @@ const chestExercises = [
         image : DBfly,
     },
     {
-        name : 'Lower Cable Press',
+        name : 'Lower cable Press',
         image : lowCable,
     },
     {
-        name : 'Middle Cable Press',
+        name : 'Middle cable Press',
         image : middleCable,
     },
     {
-        name : 'Upper Cable Press',
+        name : 'Upper cable Press',
         image : upperCable,
     },
     {
-        name : 'Machine Chest press',
+        name : 'Machine chest press',
         image : machinePress,
     },
     {
-        name : 'Pec Deck',
+        name : 'Pec deck',
         image : pecdeck,
     },
 ] 

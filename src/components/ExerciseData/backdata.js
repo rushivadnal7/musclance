@@ -33,13 +33,14 @@ const backExercise = [
         image : oneArmDumbellRow
     },
     {
-        name : 'Seated Machine row',
+        name : 'Seated machine row',
         image : seatedMachineRow
     },
     {
         name : 'T-bar row',
         image : TbarRow
     }
+    
 ]
 
 export default backExercise;

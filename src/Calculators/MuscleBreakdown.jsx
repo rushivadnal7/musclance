@@ -16,7 +16,6 @@ const MuscleBreakdown = () => {
       const sliderWidth = 390; 
       const buttonWidth = 130; 
       const maxMovement = sliderWidth - buttonWidth;
-
       const threshold = 260
 
       if (down && distance > threshold && dx > 0) {

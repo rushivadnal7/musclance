@@ -38,7 +38,7 @@ export const Wrapper = styled.section`
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    background-color: var(--seasalt);
+    background-color: var(--third-color);
     align-items: start;
     padding: 0px 50px;
     color: var(--primary);

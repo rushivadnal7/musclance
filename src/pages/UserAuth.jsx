@@ -71,7 +71,7 @@ const UserAuth = () => {
             <span className="icon-content">
               Fatigued.
             </span>
-            <Button onClick={signInHandler} className="long-button" text="sign in" />
+            <Button onClick={signInHandler} bgcolor='secondary' className="long-button" text="sign in" />
             <div className="login-navigate-text">
               <span onClick={signUpHandler} className="">or create account</span>
               <svg

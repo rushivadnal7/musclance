@@ -7,27 +7,27 @@ import DumbellCurl from '../../exercisesAssets/bicep/bicepDumbellCurll.png'
 
 const bicepExercises = [
     {
-        name : 'Barbell Curl',
+        name : 'Barbell curl',
         image : barbellCurl,
     },
     {
-        name : 'Concentration Curl',
+        name : 'Concentration curl',
         image : concentrationCurl,
     },
     {
-        name : 'Cable Curl',
+        name : 'Cable curl',
         image : cableCurl,
     },
     {
-        name : 'Hammer Curl',
+        name : 'Hammer curl',
         image : hammerCurl,
     },
     {
-        name : 'Seated Dumbell Curl',
+        name : 'Seated dumbell curl',
         image : seatedDumbellCurl,
     },
     {
-        name : 'Dumbell Curl',
+        name : 'Dumbell curl',
         image : DumbellCurl,
     },
 ]

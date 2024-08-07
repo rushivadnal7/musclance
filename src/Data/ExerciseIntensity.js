@@ -1,0 +1,55 @@
+const exerciseIntensity = {
+    'Latpulldown': 'Moderate',
+    'Barbellrow': 'High',
+    'VBarrow': 'Moderate',
+    'Cableseatedrow': 'Moderate',
+    'Dumbbellshrugs': 'Low',
+    'Onearmdumbbellrow': 'Moderate',
+    'Seatedmachinerow': 'Moderate',
+    'T-barrow': 'High', // back.
+    'Barbellcurl': 'Moderate',
+    'Concentrationcurl': 'Low',
+    'Cablecurl': 'Low',
+    'Hammercurl': 'Moderate',
+    'Seateddumbbellcurl': 'Moderate',
+    'Dumbbellcurl': 'Moderate', // bicep.
+    'Pushups': 'Low',
+    'Flatbarbellbenchpress': 'High',
+    'Inclinebarbellbenchpress': 'High',
+    'Declinebarbellbenchpress': 'High',
+    'Flatdumbbellbenchpress': 'Moderate',
+    'Inclinedumbbellbenchpress': 'Moderate',
+    'Declinedumbbellbenchpress': 'Moderate',
+    'Dumbbellchestfly': 'Moderate',
+    'Lowercablepress': 'Low',
+    'Middlecablepress': 'Low',
+    'Uppercablepress': 'Low',
+    'Machinechestpress': 'Moderate',
+    'Pecdeck': 'Low', // chest.
+    'Barbellsquats': 'High',
+    'Barbellcalfraise': 'Low',
+    'BarbellRDL': 'High',
+    'Bodyweightcalfraise': 'Low',
+    'DumbbellRDL': 'Moderate',
+    'Dumbbellsplilunges': 'Moderate',
+    'Dumbbellsquats': 'Moderate',
+    'Legextension': 'Low',
+    'Legpress': 'Moderate',
+    'Reversehamstringextension': 'Moderate',
+    'Smithmachinesquats': 'High', // legs.
+    'Dumbbellshoulderpress': 'High',
+    'Dumbbelllateralraises': 'Moderate',
+    'Machineshoulderpress': 'High',
+    'Cablelateralraise': 'Moderate',
+    'Dumbbellrearlateralraise': 'Moderate',
+    'Ropefacepull': 'Low', // shoulder
+    'Cableoverheadextension': 'Moderate',
+    'Cablepushdown': 'Low',
+    'Dumbbellooverheadextension': 'Moderate',
+    'Skullcrusher': 'High',
+    'Highcableoverheadextension': 'Moderate',
+    'Kickback': 'Moderate',
+    'Tricepropepushdown': 'Low'
+}
+
+export default exerciseIntensity;

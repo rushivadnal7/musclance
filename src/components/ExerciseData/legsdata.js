@@ -13,11 +13,11 @@ import smithMachineSquat from '../../exercisesAssets/legs/smith machine squat.pn
 
 const legExercises = [
     {
-        name: 'Barbell Squats',
+        name: 'Barbell squats',
         image: barbellSquats
     },
     {
-        name: 'Barbell Calf Raise',
+        name: 'Barbell calf raise',
         image: barbellCalfRaise
     },
     {
@@ -25,7 +25,7 @@ const legExercises = [
         image: BarbellRDL
     },
     {
-        name: 'Bodyweight Calf Raise',
+        name: 'Bodyweight calf Raise',
         image: bodyweightCalf
     },
     {
@@ -33,15 +33,15 @@ const legExercises = [
         image: dumbellRDL
     },
     {
-        name: 'Dumbell Split Lunges',
+        name: 'Dumbell split Lunges',
         image: lunges
     },
     {
-        name: 'Dumbell Squats',
+        name: 'Dumbell squats',
         image: dumbellSquat
     },
     {
-        name: 'Leg Extension',
+        name: 'Leg extension',
         image: extension
     },
     {

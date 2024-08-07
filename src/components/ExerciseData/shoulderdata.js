@@ -8,27 +8,27 @@ import ropeFacePull from '../../exercisesAssets/shoulder/rope face pulls.png'
 
 const shoulderExercises = [
     {
-        name : 'Dumbell Shoulder Press',
+        name : 'Dumbell shoulder press',
         image : dumbellPress
     },
     {
-        name : 'Dumbell Lateral Raises',
+        name : 'Dumbell lateral raises',
         image : dumbellLateralraises
     },
     {
-        name : 'Machine Shoulder Press',
+        name : 'Machine shoulder press',
         image : machinepress
     },
     {
-        name : 'Cable Lateral Raise',
+        name : 'Cable lateral raise',
         image : cableLateralRaise
     },
     {
-        name : 'Dumbell Rear Lateral Raise',
+        name : 'Dumbell rear lateral raise',
         image : dumbellRearraise
     },
     {
-        name : 'Rope Face Pull',
+        name : 'Rope face pull',
         image : ropeFacePull
     }
     

@@ -7,11 +7,12 @@ import Button from "./Button";
 import ProgressBar from "./ProgressBar";
 import ExerciseSelect from "./InputComponents/ExerciseSelect";
 import { Context } from "../Context/MyContext";
+import { calculateMuscleBreakdown } from "../functions/Musclebreakdownfunc";
 
 const MuscleBDInputs = () => {
   const navigate = useNavigate();
 
-  const {WorkOutData, setWorkoutData} = useContext(Context);
+  const { WorkOutData, setWorkoutData } = useContext(Context);
   const [selectedMuscle, setSelectedMuscle] = useState(null);
   const [showErrors, setShowErrors] = useState(false);
   const [InputContent, setInputContent] = useState("musclegroup");
@@ -27,10 +28,12 @@ const MuscleBDInputs = () => {
       setInputContent("exercises");
     }
   };
-  
+
   const TrackButtonHandler = () => {
-    console.log(WorkOutData)
-  }
+   const result =  calculateMuscleBreakdown(WorkOutData);
+    console.log(result);
+
+  };
 
   const progresBarHandler = () => {
     setShowErrors(false);
@@ -78,9 +81,7 @@ const MuscleBDInputs = () => {
             </svg>
           </div>
 
-          <div
-            className="progress-bar"
-          >
+          <div className="progress-bar">
             <div
               className={`progress-bar-inner ${
                 InputContent === "exercises" ? "width-80" : "width-40"
@@ -90,19 +91,23 @@ const MuscleBDInputs = () => {
         </div>
 
         {InputContent === "musclegroup" ? (
-          <Musclegroup selectedMuscleGroup={muscleGroupSelector}  />
+          <Musclegroup selectedMuscleGroup={muscleGroupSelector} />
         ) : (
           <ExerciseSelect muscle={selectedMuscle} />
         )}
 
         <Button
-          text={InputContent === "musclegroup" ? 'Next' : 'Track'}
+          text={InputContent === "musclegroup" ? "Next" : "Track"}
           className="small-button button"
           width={100}
           bgcolor="secondary"
-          onClick={InputContent === "musclegroup" ? NextButtonHandler : TrackButtonHandler}
+          onClick={
+            InputContent === "musclegroup"
+              ? NextButtonHandler
+              : TrackButtonHandler
+          }
           disable={showErrors ? true : false}
-          style={`${showErrors? '0.3' : '1' }`}
+          style={`${showErrors ? "0.3" : "1"}`}
         />
       </Wrapper>
     </>

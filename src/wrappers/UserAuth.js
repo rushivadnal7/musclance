@@ -83,7 +83,7 @@ const Wrapper = styled.section`
     display: flex;
     justify-content: center;
     width: 100%;
-    background-color: var(--seasalt);
+    background-color: var(--third-color);
 
     @media (min-width: ${({ theme }) => theme.breakpoints.lg}) {
       position: static;

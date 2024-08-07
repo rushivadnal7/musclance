@@ -11,6 +11,7 @@ const Button = ({
   svg,
   disable,
   style,
+  color,
 }) => {
   return (
     <>
@@ -22,6 +23,7 @@ const Button = ({
         bgcolor={bgcolor}
         onClick={onClick}
         className={`${className}`}
+        color={color}
       >
         {text}
         {svg}

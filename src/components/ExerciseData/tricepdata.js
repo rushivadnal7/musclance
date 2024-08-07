@@ -8,31 +8,31 @@ import ropePushdown from '../../exercisesAssets/tricep/tricep rope pushdown.png'
 
 const tricepExercises = [
     {
-        name: 'Cable Overhead Extension',
+        name: 'Cable overhead extension',
         image: cableOverHeadExtension,
     },
     {
-        name: 'Cable Pushdown',
+        name: 'Cable pushdown',
         image: cablePushdown,
     },
     {
-        name: 'Dumbell Overhead Extension',
+        name: 'Dumbell overhead extension',
         image: dumbellOverheadExtension
     },
     {
-        name: 'Skull Crusher',
+        name: 'Skull crusher',
         image: skullCrusher
     },
     {
-        name: 'High Cable Overhead Extension',
+        name: 'High cable overhead extension',
         image: highCableOverheadExtension
     },
     {
-        name: 'Kick Back',
+        name: 'Kick back',
         image: kickBack
     },
     {
-        name: 'Tricep Rope Pushdown',
+        name: 'Tricep rope pushdown',
         image: ropePushdown
     }
 ]

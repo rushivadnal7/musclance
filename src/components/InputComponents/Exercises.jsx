@@ -8,6 +8,10 @@ const Exercises = ({ image, name, ExerciseDetails }) => {
   const [currentRep, setCurrentRep] = useState(1);
   const [FinalSet, setFinalSet] = useState(null);
   const [FinalRep, setFinalRep] = useState(null);
+  const [FinalWeight, setFinalWeight] = useState(null);
+  const trimmedExerciseName = name.replace(/ /g , '')
+
+
 
   const getSetPrevValue = (value) => (value === 1 ? 6 : value - 1);
   const getSetsNextValue = (value) => (value === 6 ? 1 : value + 1);
@@ -43,10 +47,15 @@ const Exercises = ({ image, name, ExerciseDetails }) => {
   };
 
   useEffect(() => {
-    if (FinalSet !== null && FinalRep !== null) {
-      ExerciseDetails({ name, sets: FinalSet, reps: FinalRep });
+    if (FinalSet !== null && FinalRep !== null && FinalWeight !== null) {
+      ExerciseDetails({
+        name : trimmedExerciseName,
+        sets: FinalSet,
+        reps: FinalRep,
+        weight: FinalWeight,
+      });
     }
-  }, [FinalSet, FinalRep]);
+  }, [FinalSet, FinalRep, FinalWeight]);
 
   const [touchStart, setTouchStart] = useState(null);
   const [touchEnd, setTouchEnd] = useState(null);
@@ -112,7 +121,11 @@ const Exercises = ({ image, name, ExerciseDetails }) => {
         </div>
         <div className="weight-div">
           <span>Weights : </span>
-          <input type="number" id="weight-input" />
+          <input
+            type="number"
+            onChange={(e) => setFinalWeight(e.target.value)}
+            id="weight-input"
+          />
         </div>
         <div className="container">
           <div
