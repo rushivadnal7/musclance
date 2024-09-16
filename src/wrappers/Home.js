@@ -15,10 +15,9 @@ export const Content = styled.div`
   flex-direction: column;
 
   .heading-text {
-    height: 10%;
+    height: 7%;
     width: 100%;
     font-size: 1.3rem;
-    /* border: 1px solid red; */
   }
 
   .weekly-data {
@@ -107,27 +106,33 @@ export const Content = styled.div`
     
   }
 
-  .container-title {
-    width: 100%;
-    height: 20%;
-    font-size: 1.4rem;
-    display: flex;
-    align-items: end;
-    font-weight: 500;
-  }
+
 
   .bottom-container{
     height: 50%;
     width: 100%;
     display: flex;
     flex-direction: column;
+    gap: 1rem;
+    align-items: center;
     justify-content: center;
+  }
+  
+  .container-title {
+    text-align: center;
+    width: max-content;
+    height: 10%;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: end;
+    font-weight: 500;
   }
   .calculator-container {
     height:80%;
     width: 100%;
     display: flex;
     align-items: start;
+    justify-content: center;
     overflow-x: scroll;
     gap: 20px;
     flex-wrap: nowrap;

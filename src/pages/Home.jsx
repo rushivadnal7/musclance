@@ -63,7 +63,7 @@ const Home = () => {
           </div>
 
           <div className="bottom-container">
-            <h1 className="container-title">Calculators</h1>
+            <h1 className="container-title">Track your workout</h1>
             <div className="calculator-container">
               <div
                 className="calculator musclebreakdown"
@@ -94,7 +94,7 @@ const Home = () => {
                   Calculator
                 </h1>
               </div>
-              <div
+              {/* <div
                 className="calculator calorie"
                 style={{
                   backgroundImage: `url(${calorie_bg})`,
@@ -122,11 +122,11 @@ const Home = () => {
                 <h1>
                   Calorie counter <br /> calculator
                 </h1>
-              </div>
+              </div> */}
             </div>
           </div>
+          <MobileNavbar />
         </Content>
-        <MobileNavbar />
       </Wrapper>
     </>
   );

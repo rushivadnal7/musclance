@@ -12,6 +12,12 @@ export const Wrapper = styled.div`
   overflow-y: scroll;
   margin-bottom: 20px;
 
-
-
+  .MuscleGroup-title{
+    font-size: larger;
+    font-weight: bold;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+  }
+  
 `;
+ 

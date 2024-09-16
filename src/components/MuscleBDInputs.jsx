@@ -12,7 +12,7 @@ import { calculateMuscleBreakdown } from "../functions/Musclebreakdownfunc";
 const MuscleBDInputs = () => {
   const navigate = useNavigate();
 
-  const { WorkOutData, setWorkoutData } = useContext(Context);
+  const { WorkOutData , setMBresult} = useContext(Context)
   const [selectedMuscle, setSelectedMuscle] = useState(null);
   const [showErrors, setShowErrors] = useState(false);
   const [InputContent, setInputContent] = useState("musclegroup");
@@ -21,6 +21,7 @@ const MuscleBDInputs = () => {
     setSelectedMuscle(muscle);
   };
 
+  // console.log(selectedMuscle)
   const NextButtonHandler = () => {
     if (selectedMuscle === null) {
       setShowErrors(true);
@@ -30,9 +31,9 @@ const MuscleBDInputs = () => {
   };
 
   const TrackButtonHandler = () => {
-   const result =  calculateMuscleBreakdown(WorkOutData);
-    console.log(result);
-
+    const result = calculateMuscleBreakdown(WorkOutData);
+    setMBresult(result)
+    navigate("/resultscharts");
   };
 
   const progresBarHandler = () => {

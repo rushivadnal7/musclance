@@ -91,6 +91,8 @@ const Exercises = ({ image, name, ExerciseDetails }) => {
           <div
             className={`sets-reps-display ${!drawerOpen ? "flex" : "hidden"}`}
           >
+
+            <span id="sets">weight : {FinalWeight}</span>
             <span id="sets">Sets : {FinalSet}</span>
             <span id="reps">Reps : {FinalRep}</span>
           </div>

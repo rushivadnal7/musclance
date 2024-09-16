@@ -16,6 +16,7 @@ const muscleGroupAdjustments = {
 const getExerciseTypeCoefficient = (intensity, muscleGroup) => {
     const baseCoefficient = baseIntensityCoefficients[intensity] || 1.0;
     const muscleAdjustment = muscleGroupAdjustments[muscleGroup] || 0.0;
+    
     return baseCoefficient + muscleAdjustment;
 };
 

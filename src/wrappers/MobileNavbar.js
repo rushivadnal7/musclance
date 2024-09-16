@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  width: 80%;
-  height: 4.5rem;
-  position: fixed;
-  left: 50%;
-  transform: translateX(-50%);
-  bottom: 20px;
+  width: 100%;
+  height: 8%;
+  /* position: fixed; */
+  /* left: 50%; */
+  /* transform: translateX(-50%); */
+  /* bottom: 20px; */
   background-color: rgba(255,255,255,0.2);
   border-radius: 20px;
   display: flex;

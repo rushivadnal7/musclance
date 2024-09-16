@@ -7,6 +7,7 @@ import { ThemeProvider } from "styled-components";
 import Home from "./pages/Home";
 import MuscleBreakdown from "./Calculators/MuscleBreakdown";
 import MuscleBDInputs from "./components/MuscleBDInputs";
+import ResultCharts from "./pages/ResultCharts";
 
 function App() {
   const route = createBrowserRouter([
@@ -33,6 +34,10 @@ function App() {
     {
       path: "/mbdtracker",
       element: <MuscleBDInputs/>,
+    },
+    {
+      path: "/resultscharts",
+      element: <ResultCharts/>,
     },
   ]);
 
